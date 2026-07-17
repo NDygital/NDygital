@@ -1,0 +1,67 @@
+/* ========================= */
+/* CSS */
+/* Desain Cover */
+/* ========================= */
+
+body{
+    margin:0;
+    padding:0;
+    background:#FBECEA;
+    font-family:Georgia, serif;
+}
+
+#cover{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h1{
+    color:#6B2D3A;
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:22px;
+    color:#444;
+}
+
+h2{
+    color:#8C3A4B;
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+button{
+    background:#5A2E39;
+    color:white;
+    border:none;
+    padding:18px 40px;
+    border-radius:50px;
+    font-size:20px;
+}
+
+#isi{
+    display:none;
+}
+
+/* ==================== */
+/* Isi Undangan */
+/* ==================== */
+
+#isi{
+    padding:50px 20px;
+    text-align:center;
+}
+
+#isi h1{
+    color:#6B2D3A;
+}
+
+#isi p{
+    font-size:20px;
+}
