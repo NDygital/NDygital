@@ -44,3 +44,39 @@ button{
     max-width:430px;
     margin:auto;
 }
+
+#hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    background:#F8EDEC;
+}
+
+.subjudul{
+    font-size:18px;
+    letter-spacing:3px;
+    color:#8b6b73;
+    margin-bottom:20px;
+}
+
+#hero h1{
+    font-size:48px;
+    color:#6d3945;
+    margin:0;
+    line-height:1.2;
+}
+
+#hero span{
+    display:block;
+    font-size:32px;
+}
+
+.tanggal{
+    margin-top:20px;
+    font-size:18px;
+    color:#8b6b73;
+}
