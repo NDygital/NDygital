@@ -5,28 +5,37 @@
     box-sizing:border-box;
 }
 
-/* Body */
 body{
-    background:#FDF6F3;
-    font-family:Arial, sans-serif;
+    margin:0;
+    background:#F8EDEC;
+    font-family:Arial,sans-serif;
 }
 
-/* Cover */
 .cover{
+    width:100%;
     min-height:100vh;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
+    padding:40px 20px;
+
     text-align:center;
-    padding:20px;
 }
 
-/* Judul */
 .cover h1{
-    font-size:40px;
-    color:#7B3F4A;
-    margin-bottom:20px;
+
+    color:#8C3D50;
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+    letter-spacing:2px;
 }
 
 /* Nama Pengantin */
