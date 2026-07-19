@@ -1,67 +1,55 @@
-/* ========================= */
-/* CSS */
-/* Desain Cover */
-/* ========================= */
-
-body{
+/* Reset */
+*{
     margin:0;
     padding:0;
-    background:#FBECEA;
-    font-family:Georgia, serif;
+    box-sizing:border-box;
 }
 
-#cover{
-    height:100vh;
+/* Body */
+body{
+    background:#FDF6F3;
+    font-family:Arial, sans-serif;
+}
+
+/* Cover */
+.cover{
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:20px;
 }
 
-h1{
-    color:#6B2D3A;
-    font-size:48px;
-    margin-bottom:15px;
+/* Judul */
+.cover h1{
+    font-size:40px;
+    color:#7B3F4A;
+    margin-bottom:20px;
 }
 
-p{
-    font-size:22px;
-    color:#444;
+/* Nama Pengantin */
+.cover h2{
+    font-size:34px;
+    color:#7B3F4A;
+    margin-top:20px;
 }
 
-h2{
-    color:#8C3A4B;
-    font-size:32px;
-    margin-bottom:35px;
+/* Tanggal */
+.cover p{
+    font-size:18px;
+    margin-top:10px;
+    color:#555;
 }
 
-button{
-    background:#5A2E39;
-    color:white;
+/* Tombol */
+.cover button{
+    margin-top:30px;
+    padding:15px 35px;
     border:none;
-    padding:18px 40px;
     border-radius:50px;
-    font-size:20px;
-}
-
-#isi{
-    display:none;
-}
-
-/* ==================== */
-/* Isi Undangan */
-/* ==================== */
-
-#isi{
-    padding:50px 20px;
-    text-align:center;
-}
-
-#isi h1{
-    color:#6B2D3A;
-}
-
-#isi p{
-    font-size:20px;
+    background:#7B3F4A;
+    color:white;
+    font-size:18px;
 }
