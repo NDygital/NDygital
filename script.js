@@ -1,7 +1,13 @@
-function bukaUndangan() {
+const tombol = document.getElementById("openBtn");
 
-    document.getElementById("cover").style.display = "none";
+const cover = document.getElementById("cover");
 
-    document.getElementById("isi").style.display = "block";
+const isi = document.getElementById("isi");
+
+tombol.onclick = function(){
+
+    cover.style.display = "none";
+
+    isi.style.display = "block";
 
 }
