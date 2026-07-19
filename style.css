@@ -1,4 +1,3 @@
-/* Reset */
 *{
     margin:0;
     padding:0;
@@ -6,59 +5,32 @@
 }
 
 body{
-    margin:0;
-    background:#F8EDEC;
-    font-family:Arial,sans-serif;
+    background:#f7efee;
+    font-family:Arial, sans-serif;
 }
 
 .cover{
+    position:relative;
     width:100%;
-    min-height:100vh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    padding:40px 20px;
-
-    text-align:center;
+    max-width:430px;
+    margin:auto;
 }
 
-.cover h1{
-
-    color:#8C3D50;
-
-    font-size:42px;
-
-    line-height:1.2;
-
-    margin-bottom:30px;
-
-    letter-spacing:2px;
+.cover-img{
+    width:100%;
+    display:block;
 }
 
-/* Nama Pengantin */
-.cover h2{
-    font-size:34px;
-    color:#7B3F4A;
-    margin-top:20px;
-}
-
-/* Tanggal */
-.cover p{
-    font-size:18px;
-    margin-top:10px;
-    color:#555;
-}
-
-/* Tombol */
-.cover button{
-    margin-top:30px;
-    padding:15px 35px;
+button{
+    position:absolute;
+    left:50%;
+    bottom:7%;
+    transform:translateX(-50%);
+    padding:14px 35px;
     border:none;
     border-radius:50px;
-    background:#7B3F4A;
+    background:#6d3945;
     color:white;
-    font-size:18px;
+    font-size:16px;
+    cursor:pointer;
 }
