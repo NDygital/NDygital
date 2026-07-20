@@ -301,3 +301,49 @@ body{
     line-height:1.8;
     margin:20px 0;
 }
+
+
+/* ===========================
+   AYAT AR-RUM
+=========================== */
+
+#ayat{
+    background:#F8EDEC;
+    text-align:center;
+    padding:60px 25px;
+}
+
+.ayat{
+    max-width:320px;
+    margin:0 auto 20px;
+    line-height:1.8;
+    color:#555;
+}
+
+.surat{
+    color:#8A0D17;
+    font-weight:bold;
+}
+
+/* ===========================
+   BRIDE & GROOM
+=========================== */
+
+#bride-groom{
+    background:#F8EDEC;
+    text-align:center;
+    padding:60px 25px;
+}
+
+.mempelai{
+    margin-bottom:50px;
+}
+
+.foto-mempelai{
+    width:180px;
+    height:230px;
+    object-fit:cover;
+    display:block;
+    margin:20px auto;
+    border-radius:20px;
+}
