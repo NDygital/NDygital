@@ -7,6 +7,9 @@
     <title>NDYGITAL</title>
 
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
@@ -23,7 +26,7 @@
 
   <div class="isi" id="isi">
 
-    <section id="hero">
+   <section id="hero" data-aos="fade-up">
 
         <p class="hero-kecil">
     THE WEDDING OF
@@ -40,7 +43,7 @@
     </section>
     
     
-    <section id="save-date">
+    <section id="save-date" data-aos="fade-up">
 
     <h2>SAVE<br>THE<br>DATE!</h2>
 
@@ -53,7 +56,7 @@
     </p>
 
 </section>
-<section id="bride-groom">
+<section id="bride-groom" data-aos="fade-right">
 
     <h2 class="judul-section">
         Bride & Groom
@@ -91,7 +94,7 @@
     </div>
 
 </section>
-<section id="love-story">
+<section id="love-story" data-aos="fade-up">
 
     <h2 class="judul-section">
         Love Story
@@ -136,7 +139,7 @@
 
 </section>
 
-<section id="maps">
+<section id="maps" data-aos="zoom-in">
 
     <h2 class="judul-section">
         Wedding Location
@@ -154,7 +157,7 @@
 
 </section>
 
-<section id="rsvp">
+<section id="rsvp" data-aos="fade-up">
 
     <h2 class="judul-section">
         RSVP
@@ -176,7 +179,7 @@
 
 </section>
 
-<section id="gallery">
+<section id="gallery" data-aos="zoom-in">
 
     <h2 class="judul-section">
         Gallery
@@ -194,7 +197,7 @@
 
 </section>
 
-<section id="countdown">
+<section id="countdown" data-aos="flip-up">
 
     <h2 class="judul-section">
         OUR BIG DAY AWAITS
@@ -226,7 +229,7 @@
 
 </section>
 
-<section id="closing">
+<section id="closing" data-aos="fade-up">
 
     <h2>Thank You</h2>
 
@@ -242,6 +245,15 @@
 </div>
 
     <script src="script.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 1000,
+    once: true
+});
+</script>
 
 </body>
 
