@@ -347,3 +347,63 @@ body{
     margin:20px auto;
     border-radius:20px;
 }
+
+/* ===========================
+   BISMILLAH
+=========================== */
+
+#bismillah{
+    background:#F8EDEC;
+    text-align:center;
+    padding:60px 25px;
+}
+
+.lafaz{
+    font-size:60px;
+    color:#8A0D17;
+    margin-bottom:20px;
+}
+
+.salam{
+    font-size:22px;
+    color:#8A0D17;
+    margin-bottom:20px;
+}
+
+.doa{
+    max-width:350px;
+    margin:0 auto;
+    line-height:1.8;
+    color:#555;
+}
+
+/* ===========================
+   WEDDING GIFT
+=========================== */
+
+#gift{
+    background:#F8EDEC;
+    text-align:center;
+    padding:60px 25px;
+}
+
+.rekening{
+    background:white;
+    max-width:350px;
+    margin:30px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.copyBtn{
+    position:static;
+    transform:none;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#8A0D17;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
