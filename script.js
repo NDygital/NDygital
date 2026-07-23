@@ -49,3 +49,16 @@ setInterval(function(){
     document.getElementById("seconds").innerHTML = seconds;
 
 },1000);
+
+// ===============================
+// NAMA TAMU OTOMATIS
+// ===============================
+
+const params = new URLSearchParams(window.location.search);
+
+const namaTamu = params.get("to");
+
+if (namaTamu) {
+    document.getElementById("namaTamu").textContent =
+    decodeURIComponent(namaTamu);
+}
