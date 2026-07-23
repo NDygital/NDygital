@@ -21,6 +21,29 @@ body{
     display:block;
 }
 
+.kepada{
+    position:absolute;
+    bottom:130px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#5d1e25;
+    font-size:18px;
+    margin:0;
+}
+
+#namaTamu{
+    position:absolute;
+    bottom:90px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#5d1e25;
+    font-size:28px;
+    font-weight:bold;
+    width:90%;
+    text-align:center;
+    margin:0;
+}
+
 #openBtn{
     position:absolute;
     left:50%;
