@@ -62,3 +62,10 @@ if (namaTamu) {
     document.getElementById("namaTamu").textContent =
     decodeURIComponent(namaTamu);
 }
+
+// ===========================
+// DATA PENGANTIN
+// ===========================
+
+document.getElementById("namaPengantin").textContent =
+data.pengantinPria + " & " + data.pengantinWanita;
