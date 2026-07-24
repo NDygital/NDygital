@@ -118,3 +118,25 @@ if (btnMaps) {
     btnMaps.href = data.maps;
     btnMaps.target = "_blank";
 }
+
+// ===========================
+// WEDDING GIFT
+// ===========================
+
+document.getElementById("bank1").textContent = data.bank1;
+document.getElementById("namaRekening1").textContent = data.namaRekening1;
+document.getElementById("nomorRekening1").textContent = data.nomorRekening1;
+
+document.getElementById("bank2").textContent = data.bank2;
+document.getElementById("namaRekening2").textContent = data.namaRekening2;
+document.getElementById("nomorRekening2").textContent = data.nomorRekening2;
+
+document.getElementById("copyBtn1").onclick = function () {
+    navigator.clipboard.writeText(data.nomorRekening1);
+    alert("Nomor rekening berhasil disalin.");
+};
+
+document.getElementById("copyBtn2").onclick = function () {
+    navigator.clipboard.writeText(data.nomorRekening2);
+    alert("Nomor rekening berhasil disalin.");
+};

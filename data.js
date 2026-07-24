@@ -16,6 +16,18 @@ const data = {
 
     maps: "https://maps.google.com/",
     
+    bank1: "BCA",
+
+    namaRekening1: "Shella Eka Putri",
+
+    nomorRekening1: "1234567890",
+
+    bank2: "BRI",
+
+    namaRekening2: "Salman Rahmawan",
+
+    nomorRekening2: "987654321",
+    
     ayahPria: "Bapak Ahmad",
     
     ibuPria: "Ibu Siti",
