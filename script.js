@@ -72,3 +72,9 @@ data.pengantinPria + " & " + data.pengantinWanita;
 
 document.getElementById("saveTanggal").textContent =
 data.tanggal;
+
+document.getElementById("ortuPria").textContent =
+data.ayahPria + " & " + data.ibuPria;
+
+document.getElementById("ortuWanita").textContent =
+data.ayahWanita + " & " + data.ibuWanita;
