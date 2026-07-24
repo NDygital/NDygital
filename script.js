@@ -78,3 +78,9 @@ data.ayahPria + " & " + data.ibuPria;
 
 document.getElementById("ortuWanita").textContent =
 data.ayahWanita + " & " + data.ibuWanita;
+
+document.getElementById("namaLengkapPria").textContent =
+data.namaLengkapPria;
+
+document.getElementById("namaLengkapWanita").textContent =
+data.namaLengkapWanita;
