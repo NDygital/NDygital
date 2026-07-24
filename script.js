@@ -69,3 +69,6 @@ if (namaTamu) {
 
 document.getElementById("namaPengantin").textContent =
 data.pengantinPria + " & " + data.pengantinWanita;
+
+document.getElementById("saveTanggal").textContent =
+data.tanggal;
