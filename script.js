@@ -67,20 +67,38 @@ if (namaTamu) {
 // DATA PENGANTIN
 // ===========================
 
-document.getElementById("namaPengantin").textContent =
-data.pengantinPria + " & " + data.pengantinWanita;
+const saveNama = document.getElementById("saveNama");
+if (saveNama) {
+    saveNama.textContent =
+    data.pengantinPria + " & " + data.pengantinWanita;
+}
 
-document.getElementById("saveTanggal").textContent =
-data.tanggal;
+const saveTanggal = document.getElementById("saveTanggal");
+if (saveTanggal) {
+    saveTanggal.textContent =
+    data.tanggal;
+}
 
-document.getElementById("ortuPria").textContent =
-data.ayahPria + " & " + data.ibuPria;
+const ortuPria = document.getElementById("ortuPria");
+if (ortuPria) {
+    ortuPria.textContent =
+    data.ayahPria + " & " + data.ibuPria;
+}
 
-document.getElementById("ortuWanita").textContent =
-data.ayahWanita + " & " + data.ibuWanita;
+const ortuWanita = document.getElementById("ortuWanita");
+if (ortuWanita) {
+    ortuWanita.textContent =
+    data.ayahWanita + " & " + data.ibuWanita;
+}
 
-document.getElementById("namaLengkapPria").textContent =
-data.namaLengkapPria;
+const namaLengkapPria = document.getElementById("namaLengkapPria");
+if (namaLengkapPria) {
+    namaLengkapPria.textContent =
+    data.namaLengkapPria;
+}
 
-document.getElementById("namaLengkapWanita").textContent =
-data.namaLengkapWanita;
+const namaLengkapWanita = document.getElementById("namaLengkapWanita");
+if (namaLengkapWanita) {
+    namaLengkapWanita.textContent =
+    data.namaLengkapWanita;
+}
