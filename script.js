@@ -102,3 +102,19 @@ if (namaLengkapWanita) {
     namaLengkapWanita.textContent =
     data.namaLengkapWanita;
 }
+
+const lokasi = document.getElementById("lokasi");
+if (lokasi) {
+    lokasi.textContent = data.lokasi;
+}
+
+const alamat = document.getElementById("alamat");
+if (alamat) {
+    alamat.textContent = data.alamat;
+}
+
+const btnMaps = document.getElementById("btnMaps");
+if (btnMaps) {
+    btnMaps.href = data.maps;
+    btnMaps.target = "_blank";
+}

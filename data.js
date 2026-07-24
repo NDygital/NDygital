@@ -10,6 +10,12 @@ const data = {
 
     tanggal: "11 • 12 • 2026",
     
+    lokasi: "Gedung Serbaguna Bahagia",
+
+    alamat: "Jl. Contoh No.123, Jakarta",
+
+    maps: "https://maps.google.com/",
+    
     ayahPria: "Bapak Ahmad",
     
     ibuPria: "Ibu Siti",
