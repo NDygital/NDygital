@@ -10,7 +10,7 @@ const data = {
 
     tanggal: "11 • 12 • 2026",
     
-    musik: "music/piano-romantic.mp3",
+    musik: "music/piano_romantic.mp3.mp3",
     
     lokasi: "Gedung Serbaguna Bahagia",
 
