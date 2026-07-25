@@ -1,10 +1,17 @@
 const tombol = document.getElementById("openBtn");
 const cover = document.getElementById("cover");
 const isi = document.getElementById("isi");
+const music = document.getElementById("music");
 
 tombol.onclick = function () {
+
     cover.style.display = "none";
     isi.style.display = "block";
+
+    music.src = "assets/" + data.musik;
+
+    music.play();
+
 }
 
 const slides = document.querySelectorAll(".slide");
