@@ -3,62 +3,92 @@ const cover = document.getElementById("cover");
 const isi = document.getElementById("isi");
 const music = document.getElementById("music");
 
-tombol.onclick = function () {
+// ===============================
+// COVER & MUSIC
+// ===============================
+
+const tombol = document.getElementById("openBtn");
+const cover = document.getElementById("cover");
+const isi = document.getElementById("isi");
+const music = document.getElementById("music");
+
+tombol.addEventListener("click", bukaUndangan);
+
+function bukaUndangan() {
 
     cover.style.display = "none";
     isi.style.display = "block";
 
-    music.src = "assets/" + data.musik;
+    if (music && data.musik) {
 
-    music.play();
+        music.src = "assets/" + data.musik;
+        music.load();
 
-}
-
-const slides = document.querySelectorAll(".slide");
-
-let index = 0;
-
-setInterval(function(){
-
-    slides[index].classList.remove("active");
-
-    index++;
-
-    if(index >= slides.length){
-
-        index = 0;
+        music.play().catch(function (err) {
+            console.log(err);
+        });
 
     }
 
-    slides[index].classList.add("active");
+}
 
-},3000);
+    // ===============================
+// GALLERY
+// ===============================
+
+const slides = document.querySelectorAll(".slide");
+
+if (slides.length > 0) {
+
+    let index = 0;
+
+    setInterval(function () {
+
+        slides[index].classList.remove("active");
+
+        index++;
+
+        if (index >= slides.length) {
+            index = 0;
+        }
+
+        slides[index].classList.add("active");
+
+    }, 3000);
+
+}
+
+// ===============================
+// COUNTDOWN
+// ===============================
 
 const targetDate = new Date("December 11, 2026 08:00:00").getTime();
 
-setInterval(function(){
+setInterval(function () {
 
     const now = new Date().getTime();
 
     const distance = targetDate - now;
 
-    const days = Math.floor(distance / (1000*60*60*24));
+    if (distance < 0) return;
 
-    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-    const seconds = Math.floor((distance % (1000*60)) / 1000);
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-},1000);
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+}, 1000);
 
 // ===============================
-// NAMA TAMU OTOMATIS
+// NAMA TAMU
 // ===============================
 
 const params = new URLSearchParams(window.location.search);
@@ -66,84 +96,120 @@ const params = new URLSearchParams(window.location.search);
 const namaTamu = params.get("to");
 
 if (namaTamu) {
+
     document.getElementById("namaTamu").textContent =
-    decodeURIComponent(namaTamu);
+        decodeURIComponent(namaTamu);
+
 }
 
-// ===========================
+// ===============================
 // DATA PENGANTIN
-// ===========================
+// ===============================
 
 const saveNama = document.getElementById("saveNama");
+
 if (saveNama) {
     saveNama.textContent =
-    data.pengantinPria + " & " + data.pengantinWanita;
+        data.pengantinPria + " & " + data.pengantinWanita;
 }
 
 const saveTanggal = document.getElementById("saveTanggal");
+
 if (saveTanggal) {
-    saveTanggal.textContent =
-    data.tanggal;
-}
-
-const ortuPria = document.getElementById("ortuPria");
-if (ortuPria) {
-    ortuPria.textContent =
-    data.ayahPria + " & " + data.ibuPria;
-}
-
-const ortuWanita = document.getElementById("ortuWanita");
-if (ortuWanita) {
-    ortuWanita.textContent =
-    data.ayahWanita + " & " + data.ibuWanita;
+    saveTanggal.textContent = data.tanggal;
 }
 
 const namaLengkapPria = document.getElementById("namaLengkapPria");
+
 if (namaLengkapPria) {
-    namaLengkapPria.textContent =
-    data.namaLengkapPria;
+    namaLengkapPria.textContent = data.namaLengkapPria;
 }
 
 const namaLengkapWanita = document.getElementById("namaLengkapWanita");
+
 if (namaLengkapWanita) {
-    namaLengkapWanita.textContent =
-    data.namaLengkapWanita;
+    namaLengkapWanita.textContent = data.namaLengkapWanita;
 }
 
+const ortuPria = document.getElementById("ortuPria");
+
+if (ortuPria) {
+    ortuPria.textContent =
+        data.ayahPria + " & " + data.ibuPria;
+}
+
+const ortuWanita = document.getElementById("ortuWanita");
+
+if (ortuWanita) {
+    ortuWanita.textContent =
+        data.ayahWanita + " & " + data.ibuWanita;
+}
+
+// ===============================
+// WEDDING LOCATION
+// ===============================
+
 const lokasi = document.getElementById("lokasi");
+
 if (lokasi) {
     lokasi.textContent = data.lokasi;
 }
 
 const alamat = document.getElementById("alamat");
+
 if (alamat) {
     alamat.textContent = data.alamat;
 }
 
 const btnMaps = document.getElementById("btnMaps");
+
 if (btnMaps) {
     btnMaps.href = data.maps;
     btnMaps.target = "_blank";
 }
 
-// ===========================
+// ===============================
 // WEDDING GIFT
-// ===========================
+// ===============================
 
-document.getElementById("bank1").textContent = data.bank1;
-document.getElementById("namaRekening1").textContent = data.namaRekening1;
-document.getElementById("nomorRekening1").textContent = data.nomorRekening1;
+const bank1 = document.getElementById("bank1");
+const namaRekening1 = document.getElementById("namaRekening1");
+const nomorRekening1 = document.getElementById("nomorRekening1");
+const copyBtn1 = document.getElementById("copyBtn1");
 
-document.getElementById("bank2").textContent = data.bank2;
-document.getElementById("namaRekening2").textContent = data.namaRekening2;
-document.getElementById("nomorRekening2").textContent = data.nomorRekening2;
+if (bank1) bank1.textContent = data.bank1;
+if (namaRekening1) namaRekening1.textContent = data.namaRekening1;
+if (nomorRekening1) nomorRekening1.textContent = data.nomorRekening1;
 
-document.getElementById("copyBtn1").onclick = function () {
-    navigator.clipboard.writeText(data.nomorRekening1);
-    alert("Nomor rekening berhasil disalin.");
-};
+if (copyBtn1) {
 
-document.getElementById("copyBtn2").onclick = function () {
-    navigator.clipboard.writeText(data.nomorRekening2);
-    alert("Nomor rekening berhasil disalin.");
-};
+    copyBtn1.addEventListener("click", function () {
+
+        navigator.clipboard.writeText(data.nomorRekening1);
+
+        alert("Nomor rekening berhasil disalin.");
+
+    });
+
+}
+
+const bank2 = document.getElementById("bank2");
+const namaRekening2 = document.getElementById("namaRekening2");
+const nomorRekening2 = document.getElementById("nomorRekening2");
+const copyBtn2 = document.getElementById("copyBtn2");
+
+if (bank2) bank2.textContent = data.bank2;
+if (namaRekening2) namaRekening2.textContent = data.namaRekening2;
+if (nomorRekening2) nomorRekening2.textContent = data.nomorRekening2;
+
+if (copyBtn2) {
+
+    copyBtn2.addEventListener("click", function () {
+
+        navigator.clipboard.writeText(data.nomorRekening2);
+
+        alert("Nomor rekening berhasil disalin.");
+
+    });
+
+}
