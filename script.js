@@ -1,8 +1,3 @@
-const tombol = document.getElementById("openBtn");
-const cover = document.getElementById("cover");
-const isi = document.getElementById("isi");
-const music = document.getElementById("music");
-
 // ===============================
 // COVER & MUSIC
 // ===============================
