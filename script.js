@@ -27,29 +27,58 @@ function bukaUndangan() {
 
 }
 
-    // ===============================
-// GALLERY
+// ===============================
+// GALLERY PREMIUM
 // ===============================
 
 const slides = document.querySelectorAll(".slide");
 
-if (slides.length > 0) {
+if (slides.length >= 3) {
 
     let index = 0;
 
-    setInterval(function () {
+    function updateGallery() {
 
-        slides[index].classList.remove("active");
+        slides.forEach(function(slide){
 
-        index++;
+            slide.classList.remove("active");
+            slide.classList.remove("left");
+            slide.classList.remove("right");
 
-        if (index >= slides.length) {
-            index = 0;
-        }
+        });
 
         slides[index].classList.add("active");
 
-    }, 3000);
+        let left = index - 1;
+
+        if(left < 0){
+            left = slides.length - 1;
+        }
+
+        let right = index + 1;
+
+        if(right >= slides.length){
+            right = 0;
+        }
+
+        slides[left].classList.add("left");
+        slides[right].classList.add("right");
+
+    }
+
+    updateGallery();
+
+    setInterval(function(){
+
+        index++;
+
+        if(index >= slides.length){
+            index = 0;
+        }
+
+        updateGallery();
+
+    },3000);
 
 }
 

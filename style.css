@@ -255,20 +255,75 @@ body{
 }
 
 .slider{
+
+    position:relative;
+
     width:100%;
-    max-width:350px;
+
+    max-width:380px;
+
+    height:280px;
+
     margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     overflow:hidden;
-    border-radius:20px;
+
 }
 
 .slide{
-    width:100%;
-    display:none;
+
+    position:absolute;
+
+    width:180px;
+
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:all .6s ease;
+
+    opacity:.5;
+
+    transform:scale(.8);
+
 }
 
 .slide.active{
-    display:block;
+
+    transform:translateX(0) scale(1);
+
+    opacity:1;
+
+    z-index:3;
+
+}
+
+.slide.left{
+
+    transform:translateX(-140px) scale(.85);
+
+    opacity:.7;
+
+    z-index:2;
+
+}
+
+.slide.right{
+
+    transform:translateX(140px) scale(.85);
+
+    opacity:.7;
+
+    z-index:2;
+
 }
 
 #countdown,
