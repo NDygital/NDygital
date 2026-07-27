@@ -255,10 +255,15 @@ body{
 }
 
 .gallery-text{
+
     color:#8B6F74;
-    margin-top:10px;
-    margin-bottom:30px;
+
+    margin-top:20px;
+
     font-size:15px;
+
+    text-align:center;
+
 }
 
 .slider{
