@@ -37,22 +37,41 @@ const dots = document.querySelectorAll(".dot");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 
-let index = 0;
+let index = 1;
 
-function tampilkanSlide() {
+function updateGallery(){
 
     slides.forEach(function(slide){
+
+        slide.classList.remove("left");
         slide.classList.remove("active");
+        slide.classList.remove("right");
+
     });
+
+    let left = index - 1;
+    if(left < 0){
+        left = slides.length - 1;
+    }
+
+    let right = index + 1;
+    if(right >= slides.length){
+        right = 0;
+    }
+
+    slides[left].classList.add("left");
+    slides[index].classList.add("active");
+    slides[right].classList.add("right");
 
     dots.forEach(function(dot){
         dot.classList.remove("active");
     });
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
+    dots[index % dots.length].classList.add("active");
 
 }
+
+updateGallery();
 
 next.addEventListener("click", function(){
 
@@ -62,7 +81,7 @@ next.addEventListener("click", function(){
         index = 0;
     }
 
-    tampilkanSlide();
+    updateGallery();
 
 });
 
@@ -74,7 +93,7 @@ prev.addEventListener("click", function(){
         index = slides.length - 1;
     }
 
-    tampilkanSlide();
+    updateGallery();
 
 });
 
@@ -86,7 +105,7 @@ setInterval(function(){
         index = 0;
     }
 
-    tampilkanSlide();
+    updateGallery();
 
 },3000);
 
