@@ -685,3 +685,112 @@ body{
     transform:translateX(-50%) translateY(0);
 
 }
+
+/* ===============================
+   GIFT CARD
+=============================== */
+
+.gift-card{
+
+    width:100%;
+    max-width:360px;
+
+    margin:25px auto;
+
+    padding:28px 24px;
+
+    background:#E79AAF;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(231,154,175,.25);
+
+}
+
+.gift-icon{
+
+    font-size:34px;
+
+}
+
+.gift-card h3{
+
+    margin-top:10px;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+.gift-love{
+
+    color:white;
+
+    font-size:18px;
+
+    margin:8px 0 18px;
+
+    opacity:.9;
+
+}
+
+#namaGift{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+}
+
+#alamatGift{
+
+    color:white;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    white-space:pre-line;
+
+    margin-bottom:22px;
+
+}
+
+.copyAddressBtn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px;
+
+    background:white;
+
+    color:#D97B97;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.copyAddressBtn:hover{
+
+    transform:translateY(-2px);
+
+}

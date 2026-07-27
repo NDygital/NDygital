@@ -293,3 +293,43 @@ setTimeout(function(){
     });
 
 }
+
+// ===============================
+// KIRIM KADO
+// ===============================
+
+const namaGift = document.getElementById("namaGift");
+const alamatGift = document.getElementById("alamatGift");
+const copyAddressBtn = document.getElementById("copyAddressBtn");
+
+if (namaGift) {
+    namaGift.textContent = data.namaGift;
+}
+
+if (alamatGift) {
+    alamatGift.textContent = data.alamatGift;
+}
+
+if (copyAddressBtn) {
+
+    copyAddressBtn.addEventListener("click", function () {
+
+        navigator.clipboard.writeText(data.alamatGift);
+
+        const toast = document.getElementById("toast");
+
+        toast.textContent = "✓ Alamat berhasil disalin";
+
+        toast.classList.add("show");
+
+        setTimeout(function(){
+
+            toast.classList.remove("show");
+
+            toast.textContent = "✓ Nomor rekening berhasil disalin";
+
+        },2000);
+
+    });
+
+}
