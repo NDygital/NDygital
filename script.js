@@ -28,59 +28,67 @@ function bukaUndangan() {
 }
 
 // ===============================
-// GALLERY PREMIUM
+// GALLERY
 // ===============================
 
 const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
-if (slides.length >= 3) {
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
-    let index = 0;
+let index = 0;
 
-    function updateGallery() {
+function tampilkanSlide() {
 
-        slides.forEach(function(slide){
+    slides.forEach(function(slide){
+        slide.classList.remove("active");
+    });
 
-            slide.classList.remove("active");
-            slide.classList.remove("left");
-            slide.classList.remove("right");
+    dots.forEach(function(dot){
+        dot.classList.remove("active");
+    });
 
-        });
-
-        slides[index].classList.add("active");
-
-        let left = index - 1;
-
-        if(left < 0){
-            left = slides.length - 1;
-        }
-
-        let right = index + 1;
-
-        if(right >= slides.length){
-            right = 0;
-        }
-
-        slides[left].classList.add("left");
-        slides[right].classList.add("right");
-
-    }
-
-    updateGallery();
-
-    setInterval(function(){
-
-        index++;
-
-        if(index >= slides.length){
-            index = 0;
-        }
-
-        updateGallery();
-
-    },3000);
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
 
 }
+
+next.addEventListener("click", function(){
+
+    index++;
+
+    if(index >= slides.length){
+        index = 0;
+    }
+
+    tampilkanSlide();
+
+});
+
+prev.addEventListener("click", function(){
+
+    index--;
+
+    if(index < 0){
+        index = slides.length - 1;
+    }
+
+    tampilkanSlide();
+
+});
+
+setInterval(function(){
+
+    index++;
+
+    if(index >= slides.length){
+        index = 0;
+    }
+
+    tampilkanSlide();
+
+},3000);
 
 // ===============================
 // COUNTDOWN
