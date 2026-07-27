@@ -204,45 +204,37 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
         Gallery
     </h2>
 
-    <div class="slider">
+    <div class="carousel">
 
         <button class="prev">&#10094;</button>
 
-      <div class="slides">
+        <div class="carousel-track">
 
-    <img src="assets/foto1.JPG" class="slide left">
+            <img src="assets/foto1.JPG" class="slide">
+            <img src="assets/foto2.JPG" class="slide">
+            <img src="assets/foto3.JPG" class="slide">
+            <img src="assets/foto4.JPG" class="slide">
+            <img src="assets/foto5.JPG" class="slide">
+            <img src="assets/foto6.JPG" class="slide">
+            <img src="assets/foto7.JPG" class="slide">
 
-    <img src="assets/foto2.JPG" class="slide active">
-
-    <img src="assets/foto3.JPG" class="slide right">
-
-    <img src="assets/foto4.JPG" class="slide">
-
-    <img src="assets/foto5.JPG" class="slide">
-
-    <img src="assets/foto6.JPG" class="slide">
-
-    <img src="assets/foto7.JPG" class="slide">
-
-</div>
+        </div>
 
         <button class="next">&#10095;</button>
 
     </div>
 
-    <div class="indikator">
+    <div class="indikator"></div>
 
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-
-    </div>
-    
     <p class="gallery-text">
-    Geser foto untuk melihat momen lainnya
-</p>
+        Geser foto untuk melihat momen lainnya
+    </p>
 
 </section>
+
+<!-- ==================================================
+     WEDDING GIFT
+================================================== -->
 
 <section id="gift" data-aos="fade-up">
 
@@ -250,40 +242,63 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
         Wedding Gift
     </h2>
 
-    <p>
+    <p class="gift-text">
         Doa restu Anda merupakan hadiah terindah bagi kami.
-        Namun jika ingin memberikan tanda kasih, dapat melalui rekening berikut.
+        Namun apabila ingin memberikan tanda kasih,
+        dapat melalui rekening berikut.
     </p>
 
-    <div class="rekening">
+    <div class="rekening-card">
 
-    <h3 id="bank1"></h3>
+        <div class="bank-header">
 
-    <p id="namaRekening1"></p>
+            <img src="assets/bca.png" class="logo-bank">
 
-    <p id="nomorRekening1"></p>
+            <h3 id="bank1"></h3>
 
-    <button class="copyBtn" id="copyBtn1">
-        Salin Nomor Rekening
+        </div>
+
+        <p id="namaRekening1"></p>
+
+        <p id="nomorRekening1"></p>
+
+        <button class="copyBtn" id="copyBtn1">
+            Salin Nomor Rekening
+        </button>
+
+    </div>
+
+    <button class="giftBtn">
+
+        🎁 Kirim Hadiah
+
     </button>
 
-</div>
+    <div class="rekening-card">
 
-<div class="rekening">
+        <div class="bank-header">
 
-    <h3 id="bank2"></h3>
+            <img src="assets/bri.png" class="logo-bank">
 
-    <p id="namaRekening2"></p>
+            <h3 id="bank2"></h3>
 
-    <p id="nomorRekening2"></p>
+        </div>
 
-    <button class="copyBtn" id="copyBtn2">
-        Salin Nomor Rekening
-    </button>
+        <p id="namaRekening2"></p>
 
-</div>
+        <p id="nomorRekening2"></p>
+
+        <button class="copyBtn" id="copyBtn2">
+            Salin Nomor Rekening
+        </button>
+
+    </div>
 
 </section>
+
+<div id="toast">
+    ✓ Nomor rekening berhasil disalin
+</div>
 
 <section id="countdown" data-aos="flip-up">
 

@@ -254,91 +254,67 @@ body{
     text-align:center;
 }
 
-.gallery-text{
-
-    color:#8B6F74;
-
-    margin-top:20px;
-
-    font-size:15px;
-
-    text-align:center;
-
-}
-
-.slider{
+.carousel{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:15px;
 }
 
-.slides{
-
-    width:100%;
-    max-width:430px;
-    height:520px;
-
+.carousel-track{
+    width:320px;
+    height:430px;
+    overflow:hidden;
     position:relative;
-
-    margin:auto;
-
 }
 
 .slide{
-
     position:absolute;
-
     top:50%;
     left:50%;
 
-    width:280px;
+    width:260px;
 
     border-radius:24px;
 
+    transform:translate(-50%,-50%);
+
+    opacity:0;
+
     transition:.5s ease;
 
-    transform:translate(-50%,-50%) scale(.75);
-
-    opacity:.4;
-
-    filter:blur(4px);
-
     box-shadow:0 10px 30px rgba(0,0,0,.15);
-
 }
 
 .slide.active{
 
-    transform:translate(-50%,-50%) scale(1);
-
     opacity:1;
 
-    filter:blur(0);
+    transform:translate(-50%,-50%) scale(1);
 
     z-index:3;
 
 }
 
-.slide.left{
-
-    transform:translate(-135%,-50%) scale(.78);
+.slide.prev-slide{
 
     opacity:.6;
 
-    filter:blur(4px);
+    transform:translate(-130%,-50%) scale(.8);
+
+    filter:blur(2px);
 
     z-index:2;
 
 }
 
-.slide.right{
-
-    transform:translate(35%,-50%) scale(.78);
+.slide.next-slide{
 
     opacity:.6;
 
-    filter:blur(4px);
+    transform:translate(30%,-50%) scale(.8);
+
+    filter:blur(2px);
 
     z-index:2;
 
@@ -347,19 +323,20 @@ body{
 .prev,
 .next{
 
-    width:45px;
-    height:45px;
+    width:46px;
+    height:46px;
 
     border:none;
+
     border-radius:50%;
 
-    background:white;
-
-    cursor:pointer;
+    background:#ffffff;
 
     font-size:22px;
 
-    box-shadow:0 6px 20px rgba(0,0,0,.10);
+    cursor:pointer;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
 
 }
 
@@ -376,17 +353,27 @@ body{
 
     display:inline-block;
 
+    margin:0 5px;
+
     border-radius:50%;
 
-    background:#d6c5c8;
-
-    margin:0 6px;
+    background:#d7c5ca;
 
 }
 
 .dot.active{
 
     background:#D98FA3;
+
+}
+
+.gallery-text{
+
+    margin-top:20px;
+
+    color:#8B6F74;
+
+    font-size:15px;
 
 }
 
@@ -506,33 +493,195 @@ body{
     color:#555;
 }
 
-/* ===========================
+/* ==================================================
    WEDDING GIFT
-=========================== */
+================================================== */
 
 #gift{
+
+    min-height:100vh;
+
     background:#F8EDEC;
+
+    padding:70px 20px;
+
     text-align:center;
-    padding:60px 25px;
+
 }
 
-.rekening{
-    background:white;
-    max-width:350px;
+.gift-text{
+
+    max-width:340px;
+
+    margin:20px auto 40px;
+
+    color:#8B6F74;
+
+    line-height:1.8;
+
+}
+
+.rekening-card{
+
+    background:#FFFFFF;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    max-width:340px;
+
     margin:30px auto;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.bank-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+}
+
+.logo-bank{
+
+    width:55px;
+
+    height:auto;
+
+}
+
+.rekening-card h3{
+
+    margin:0;
+
+    font-size:22px;
+
+    color:#444;
+
+}
+
+.rekening-card p{
+
+    margin:10px 0;
+
+    color:#666;
+
+    line-height:1.6;
+
 }
 
 .copyBtn{
-    position:static;
-    transform:none;
+
+    width:100%;
+
+    padding:15px;
+
     margin-top:20px;
-    padding:12px 25px;
-    background:#8A0D17;
-    color:white;
-    border:none;
-    border-radius:30px;
+
+    border-radius:50px;
+
+    border:2px solid #D98FA3;
+
+    background:#FFFFFF;
+
+    color:#D98FA3;
+
+    font-size:15px;
+
+    font-weight:bold;
+
     cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.copyBtn:hover{
+
+    background:#FDEEF2;
+
+}
+
+.giftBtn{
+
+    width:270px;
+
+    padding:16px;
+
+    margin:35px auto;
+
+    display:block;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#D98FA3;
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(217,143,163,.30);
+
+    transition:.3s;
+
+}
+
+.giftBtn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* TOAST */
+
+#toast{
+
+    position:fixed;
+
+    left:50%;
+    bottom:30px;
+
+    transform:translateX(-50%) translateY(100px);
+
+    background:#ffffff;
+
+    color:#8B6F74;
+
+    padding:14px 24px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
 }

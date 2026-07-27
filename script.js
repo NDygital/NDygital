@@ -28,69 +28,82 @@ function bukaUndangan() {
 }
 
 // ===============================
-// GALLERY
+// GALLERY V3
 // ===============================
 
 const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const indikator = document.querySelector(".indikator");
+
+let current = 0;
+
+// Membuat indikator otomatis
+slides.forEach(function () {
+
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+
+    indikator.appendChild(dot);
+
+});
+
 const dots = document.querySelectorAll(".dot");
 
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-
-let index = 1;
-
-function updateGallery(){
+function updateGallery() {
 
     slides.forEach(function(slide){
 
-        slide.classList.remove("left");
         slide.classList.remove("active");
-        slide.classList.remove("right");
+        slide.classList.remove("prev-slide");
+        slide.classList.remove("next-slide");
 
     });
-
-    let left = index - 1;
-    if(left < 0){
-        left = slides.length - 1;
-    }
-
-    let right = index + 1;
-    if(right >= slides.length){
-        right = 0;
-    }
-
-    slides[left].classList.add("left");
-    slides[index].classList.add("active");
-    slides[right].classList.add("right");
 
     dots.forEach(function(dot){
+
         dot.classList.remove("active");
+
     });
 
-    dots[index % dots.length].classList.add("active");
+    let prev = current - 1;
+    if(prev < 0){
+        prev = slides.length - 1;
+    }
+
+    let next = current + 1;
+    if(next >= slides.length){
+        next = 0;
+    }
+
+    slides[current].classList.add("active");
+    slides[prev].classList.add("prev-slide");
+    slides[next].classList.add("next-slide");
+
+    dots[current].classList.add("active");
 
 }
 
 updateGallery();
 
-next.addEventListener("click", function(){
+nextBtn.addEventListener("click", function(){
 
-    index++;
+    current++;
 
-    if(index >= slides.length){
-        index = 0;
+    if(current >= slides.length){
+        current = 0;
     }
 
     updateGallery();
 
 });
 
-prev.addEventListener("click", function(){
+prevBtn.addEventListener("click", function(){
 
-    index--;
+    current--;
 
-    if(index < 0){
-        index = slides.length - 1;
+    if(current < 0){
+        current = slides.length - 1;
     }
 
     updateGallery();
@@ -99,10 +112,10 @@ prev.addEventListener("click", function(){
 
 setInterval(function(){
 
-    index++;
+    current++;
 
-    if(index >= slides.length){
-        index = 0;
+    if(current >= slides.length){
+        current = 0;
     }
 
     updateGallery();
@@ -238,7 +251,15 @@ if (copyBtn1) {
 
         navigator.clipboard.writeText(data.nomorRekening1);
 
-        alert("Nomor rekening berhasil disalin.");
+        const toast = document.getElementById("toast");
+
+toast.classList.add("show");
+
+setTimeout(function(){
+
+    toast.classList.remove("show");
+
+},2000);
 
     });
 
@@ -259,7 +280,15 @@ if (copyBtn2) {
 
         navigator.clipboard.writeText(data.nomorRekening2);
 
-        alert("Nomor rekening berhasil disalin.");
+        const toast = document.getElementById("toast");
+
+toast.classList.add("show");
+
+setTimeout(function(){
+
+    toast.classList.remove("show");
+
+},2000);
 
     });
 
