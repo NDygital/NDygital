@@ -269,21 +269,74 @@ body{
 }
 
 .slides{
+
     width:100%;
-    max-width:420px;
+    max-width:430px;
+    height:520px;
+
     position:relative;
-    overflow:hidden;
+
+    margin:auto;
+
 }
 
 .slide{
-    width:100%;
-    display:none;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:280px;
+
     border-radius:24px;
-    transition:.4s;
+
+    transition:.5s ease;
+
+    transform:translate(-50%,-50%) scale(.75);
+
+    opacity:.4;
+
+    filter:blur(4px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
 }
 
 .slide.active{
-    display:block;
+
+    transform:translate(-50%,-50%) scale(1);
+
+    opacity:1;
+
+    filter:blur(0);
+
+    z-index:3;
+
+}
+
+.slide.left{
+
+    transform:translate(-135%,-50%) scale(.78);
+
+    opacity:.6;
+
+    filter:blur(4px);
+
+    z-index:2;
+
+}
+
+.slide.right{
+
+    transform:translate(35%,-50%) scale(.78);
+
+    opacity:.6;
+
+    filter:blur(4px);
+
+    z-index:2;
+
 }
 
 .prev,
@@ -332,25 +385,7 @@ body{
 
 }
 
-.slide.left{
 
-    transform:translateX(-140px) scale(.85);
-
-    opacity:.7;
-
-    z-index:2;
-
-}
-
-.slide.right{
-
-    transform:translateX(140px) scale(.85);
-
-    opacity:.7;
-
-    z-index:2;
-
-}
 
 #countdown,
 #closing{
