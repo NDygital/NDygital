@@ -527,11 +527,11 @@ body{
 
     border-radius:24px;
 
-    padding:28px;
+    padding:22px;
 
-    max-width:340px;
+    max-width:400px;
 
-    margin:30px auto;
+    margin:18px auto;
 
     box-shadow:0 12px 30px rgba(0,0,0,.08);
 
@@ -693,11 +693,11 @@ body{
 .gift-card{
 
     width:100%;
-    max-width:360px;
+    max-width:400px;
 
-    margin:25px auto;
+    margin:18px auto;
 
-    padding:28px 24px;
+    padding:24px 24px;
 
     background:#E79AAF;
 
@@ -721,9 +721,13 @@ body{
 
     color:white;
 
-    font-size:24px;
+    font-family:"Playfair Display", serif;
 
-    font-weight:600;
+    font-size:40px;
+
+    font-weight:500;
+
+    line-height:1.2;
 
 }
 
@@ -743,7 +747,7 @@ body{
 
     color:white;
 
-    font-size:18px;
+    font-size:24px;
 
     font-weight:600;
 
@@ -755,9 +759,9 @@ body{
 
     color:white;
 
-    line-height:1.8;
+    line-height:1.7;
 
-    font-size:15px;
+    font-size:16px;
 
     white-space:pre-line;
 
@@ -794,3 +798,36 @@ body{
     transform:translateY(-2px);
 
 }
+
+.gift-divider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin:12px 0 18px;
+
+}
+
+.gift-divider span{
+
+    width:120px;
+
+    height:1px;
+
+    background:rgba(255,255,255,.65);
+
+}
+
+.gift-heart{
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
