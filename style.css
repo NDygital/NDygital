@@ -929,13 +929,9 @@ body{
 
 .rekening-number{
 
-    font-family:"Roboto Mono", monospace;
+    color:red !important;
 
-    font-size:22px;
-
-    font-weight:700;
-
-    letter-spacing:2px;
+    font-size:40px !important;
 
 }
 
@@ -945,7 +941,7 @@ body{
 
     font-size:22px;
 
-    font-weight:800;
+    font-weight:600;
 
     color:#2f2f2f;
 
