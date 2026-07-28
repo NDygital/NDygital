@@ -32,9 +32,8 @@ const data = {
     
     namaGift: "Shella & Salman",
 
-    alamatGift: `Jl. Mawar No.10
-    RT 03 / RW 02
-    Kec. Pancoran
+    alamatGift: `Jl. Mawar No.10 RT 03/RW 02
+    Kec. Pancoran, Kel. Pancoran
     Jakarta Selatan 12780`,
     
     ayahPria: "Bapak Ahmad",

@@ -527,7 +527,7 @@ body{
 
     border-radius:24px;
 
-    padding:22px;
+    padding:20px 24px;
 
     max-width:400px;
 
@@ -545,7 +545,7 @@ body{
 
     align-items:center;
 
-    gap:12px;
+    gap:8px;
 
     margin-bottom:18px;
 
@@ -563,7 +563,9 @@ body{
 
     margin:0;
 
-    font-size:22px;
+    font-size:21px;
+
+    font-weight:600;
 
     color:#444;
 
@@ -571,11 +573,13 @@ body{
 
 .rekening-card p{
 
-    margin:10px 0;
+    margin:6px 0;
 
     color:#666;
 
-    line-height:1.6;
+    font-size:17px;
+
+    line-height:1.5;
 
 }
 
@@ -693,11 +697,12 @@ body{
 .gift-card{
 
     width:100%;
+
     max-width:400px;
 
-    margin:18px auto;
+    margin:25px auto;
 
-    padding:24px 24px;
+    padding:20px 24px;
 
     background:#E79AAF;
 
@@ -711,21 +716,27 @@ body{
 
 .gift-icon{
 
-    font-size:34px;
+    color:#fff;
+    font-size:32px;
+    margin-bottom:8px;
 
 }
 
 .gift-card h3{
 
-    margin-top:10px;
+    margin-top:8px;
 
-    color:white;
+    margin-bottom:6px;
+
+    color:#fff;
 
     font-family:"Playfair Display", serif;
 
-    font-size:40px;
+    font-size:20px;
 
     font-weight:500;
+
+    letter-spacing:.5px;
 
     line-height:1.2;
 
@@ -807,27 +818,118 @@ body{
 
     justify-content:center;
 
-    gap:14px;
+    gap:10px;
 
-    margin:12px 0 18px;
+    margin:10px 0 16px;
 
 }
 
 .gift-divider span{
 
-    width:120px;
+    width:70px;
 
     height:1px;
 
-    background:rgba(255,255,255,.65);
+    background:rgba(255,255,255,.35);
 
 }
 
-.gift-heart{
+.gift-love{
 
-    color:#fff;
+    color:#ffffff;
 
-    font-size:18px;
+    font-size:14px;
+
+    opacity:.9;
 
 }
 
+/* ===============================
+   FLOWER SVG
+=============================== */
+
+.rekening-card,
+.gift-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.flower-top{
+
+    position:absolute;
+
+    top:14px;
+
+    right:14px;
+
+    width:70px;
+
+    opacity:.22;
+
+    pointer-events:none;
+
+}
+
+.flower-bottom{
+
+    position:absolute;
+
+    left:12px;
+
+    bottom:12px;
+
+    width:90px;
+
+    opacity:.16;
+
+    pointer-events:none;
+
+}
+
+.copyBtn,
+.copyAddressBtn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.copyBtn i,
+.copyAddressBtn i{
+
+    font-size:15px;
+
+}
+
+.copyBtn:hover,
+.copyAddressBtn:hover{
+
+    background:#FFF5F7;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(217,143,163,.18);
+
+}
+
+.rekening-number{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:#333;
+
+    margin:8px 0 18px;
+
+}
