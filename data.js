@@ -30,7 +30,7 @@ const data = {
 
     nomorRekening2: "987654321",
     
-    namaGift: "Shella & Salman",
+    namaGift: "Shella + Salman",
 
     alamatGift: `Jl. Mawar No.10 RT 03/RW 02
     Kec. Pancoran, Kel. Pancoran
