@@ -553,7 +553,7 @@ body{
 
 .logo-bank{
 
-    width:48px;
+    width:44px;
 
     height:auto;
 
@@ -585,7 +585,7 @@ body{
 
 .copyBtn{
 
-    width:88%;
+    width:80%;
 
     padding:14px;
 
@@ -712,7 +712,7 @@ body{
 
     text-align:center;
 
-    box-shadow:0 10px 30px rgba(231,154,175,.25);
+    box-shadow:0 10px 24px rgba(231,154,175,.18);
 
 }
 
@@ -784,7 +784,7 @@ body{
 
 .copyAddressBtn{
 
-    width:82%;
+    width:80%;
 
     padding:14px;
 
@@ -840,7 +840,7 @@ body{
 
 }
 
-.gift-love{
+.gift-heart{
 
     color:#ffffff;
 
@@ -871,9 +871,9 @@ body{
 
     right:14px;
 
-    width:70px;
+    width:60px;
 
-    opacity:.22;
+    opacity:.18;
 
     pointer-events:none;
 
@@ -887,9 +887,9 @@ body{
 
     bottom:12px;
 
-    width:90px;
+    width:75px;
 
-    opacity:.16;
+    opacity:.15;
 
     pointer-events:none;
 
