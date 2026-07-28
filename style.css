@@ -931,13 +931,15 @@ body{
 
     font-family:"Libre Baskerville", serif;
 
-    font-size:22px;
+    font-size:23px;
 
     font-weight:700;
 
-    letter-spacing:2px;
+    letter-spacing:1px;
 
     color:#222;
+
+    margin-top:8px;
 
 }
 

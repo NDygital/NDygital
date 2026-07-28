@@ -249,7 +249,9 @@ if (copyBtn1) {
 
     copyBtn1.addEventListener("click", function () {
 
-        navigator.clipboard.writeText(data.nomorRekening1);
+        navigator.clipboard.writeText(
+    data.nomorRekening1.replace(/\s/g, "")
+);
 
         const toast = document.getElementById("toast");
 
@@ -278,7 +280,9 @@ if (copyBtn2) {
 
     copyBtn2.addEventListener("click", function () {
 
-        navigator.clipboard.writeText(data.nomorRekening2);
+        navigator.clipboard.writeText(
+    data.nomorRekening2.replace(/\s/g, "")
+);
 
         const toast = document.getElementById("toast");
 

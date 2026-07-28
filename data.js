@@ -22,13 +22,13 @@ const data = {
 
     namaRekening1: "Shella Eka Putri",
 
-    nomorRekening1: "1234567890",
+    nomorRekening1: "1234 5678 90",
 
     bank2: "BRI",
 
     namaRekening2: "Salman Rahmawan",
 
-    nomorRekening2: "987654321",
+    nomorRekening2: "9876 5432 1",
     
     namaGift: "Shella + Salman",
 
