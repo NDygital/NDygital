@@ -929,15 +929,13 @@ body{
 
 .rekening-number{
 
-    font-family:"Georgia", serif;
+    font-family:"Roboto Mono", monospace;
 
     font-size:22px;
 
-    font-weight:800;
+    font-weight:700;
 
-    letter-spacing:4px;
-
-    color:#222;
+    letter-spacing:2px;
 
 }
 
