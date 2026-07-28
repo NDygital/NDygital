@@ -378,44 +378,93 @@ body{
 }
 
 
+/* ==================================================
+   COUNTDOWN
+================================================== */
 
 #countdown,
 #closing{
+
     min-height:100vh;
+
     background:#F8EDEC;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
-    padding:60px 20px;
+
+    padding:90px 20px;
+
 }
 
-#timer{
+.countdown-box{
+
     display:flex;
-    gap:15px;
-    margin-top:30px;
-    flex-wrap:wrap;
+
     justify-content:center;
+
+    align-items:center;
+
+    gap:34px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
 }
 
-#timer div{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    min-width:70px;
+.time-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
 }
 
-#timer span{
-    font-size:30px;
-    font-weight:bold;
-    color:#8A0D17;
+.time-number{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:54px;
+
+    font-weight:700;
+
+    color:#8F5A63;
+
+    line-height:1;
+
+}
+
+.time-label{
+
+    margin-top:8px;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#8B7A7E;
+
 }
 
 #closing p{
+
     max-width:320px;
+
     line-height:1.8;
+
     margin:20px 0;
+
 }
 
 
