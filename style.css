@@ -931,15 +931,17 @@ body{
     font-size:22px;
     font-weight:700;
     letter-spacing:2px;
-    font-family:"Playfair Display", serif;
+   font-family:"Courier New", monospace;
 }
 
 .rekening-card p:first-of-type{
 
-    font-family:"Playfair Display", serif;
+    font-family:"Cormorant Garamond", serif;
 
-    font-size:20px;
+    font-size:22px;
 
-    color:#333;
-    
+    font-weight:500;
+
+    color:#2f2f2f;
+
 }
