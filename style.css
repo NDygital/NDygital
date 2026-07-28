@@ -527,13 +527,13 @@ body{
 
     border-radius:24px;
 
-    padding:20px 24px;
+    padding:20px 28px;
 
-    max-width:400px;
+    max-width:410px;
 
     margin:18px auto;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    box-shadow:0 10px 24px rgba(0,0,0,.06);
 
 }
 
@@ -553,7 +553,7 @@ body{
 
 .logo-bank{
 
-    width:55px;
+    width:48px;
 
     height:auto;
 
@@ -585,15 +585,17 @@ body{
 
 .copyBtn{
 
-    width:100%;
+    width:88%;
 
-    padding:15px;
+    padding:14px;
 
-    margin-top:20px;
+    margin:18px auto 0;
 
-    border-radius:50px;
+    display:block;
 
-    border:2px solid #D98FA3;
+    border-radius:999px;
+
+    border:1.5px solid #D98FA3;
 
     background:#FFFFFF;
 
@@ -601,7 +603,7 @@ body{
 
     font-size:15px;
 
-    font-weight:bold;
+    font-weight:600;
 
     cursor:pointer;
 
@@ -698,11 +700,11 @@ body{
 
     width:100%;
 
-    max-width:400px;
+    max-width:410px;
 
     margin:25px auto;
 
-    padding:20px 24px;
+    padding:20px 28px;
 
     background:#E79AAF;
 
@@ -782,15 +784,19 @@ body{
 
 .copyAddressBtn{
 
-    width:100%;
-
-    border:none;
-
-    border-radius:14px;
+    width:82%;
 
     padding:14px;
 
-    background:white;
+    margin:18px auto 0;
+
+    display:block;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#FFFFFF;
 
     color:#D97B97;
 
@@ -922,14 +928,12 @@ body{
 
 .rekening-number{
 
-    font-size:28px;
+    font-size:18px;
 
     font-weight:700;
 
     letter-spacing:1px;
 
-    color:#333;
-
-    margin:8px 0 18px;
+    margin-top:6px;
 
 }
