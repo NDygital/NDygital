@@ -529,17 +529,23 @@ body{
 
     margin-top:60px;
 
+    max-width:500px;
+
+    text-align:center;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
     font-family:"Cormorant Garamond", serif;
 
     font-size:28px;
 
     font-style:italic;
 
-    color:#4D4545;
-
     line-height:1.6;
 
-    max-width:420px;
+    color:#4D4545;
 
 }
 
