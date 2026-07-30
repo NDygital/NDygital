@@ -466,24 +466,26 @@ body{
 
 .time-number{
 
-    font-family:"Bodoni Moda", serif;
+    font-family:"Cormorant Infant", serif;
 
-    font-size:72px;
+    font-size:46px;
 
-    font-weight:600;
+    font-weight:500;
 
-    line-height:1.05;
+    font-style:normal;
+
+    line-height:1;
 
     color:#8F5A63;
 
     font-variant-numeric:tabular-nums;
-    
+
     transition:.35s ease;
-    
+
     min-width:90px;
 
     text-align:center;
-    
+
     margin-bottom:10px;
 
 }
