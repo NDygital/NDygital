@@ -466,13 +466,13 @@ body{
 
 .time-number{
 
-    font-family: "Cormorant Infant", serif !important;
+    font-family:"Prata", serif;
 
-    font-size:72px;
+    font-size:68px;
 
-    font-weight:600;
+    font-weight:400;
 
-    line-height:1.05;
+    line-height:1;
 
     color:#8F5A63;
 
@@ -483,6 +483,8 @@ body{
     text-align:center;
 
     margin-bottom:10px;
+
+    letter-spacing:0;
 
 }
 
@@ -1227,7 +1229,7 @@ body{
     }
 
     .time-number{
-        font-size:42px;
+        font-size:40px;
     }
 
     .time-label{
