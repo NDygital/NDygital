@@ -466,14 +466,25 @@ body{
 
 .time-number{
     font-family:"GFS Didot", serif !important;
-    font-size:72px;
+    
+    font-size:68px;
+
     font-weight:400;
+
+    letter-spacing:0.5px;
+
     line-height:1;
+    
     color:#8F5A63;
+    
     min-width:90px;
+    
     text-align:center;
+    
     margin-bottom:10px;
+    
     font-variant-numeric:lining-nums;
+    
 }
 
 .time-label{
