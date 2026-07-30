@@ -571,6 +571,90 @@ body{
 
 }
 
+/* ==========================================
+   CLOSING
+========================================== */
+
+.closing-title{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:58px;
+
+    font-weight:500;
+
+    color:#8A0D17;
+
+    margin-bottom:35px;
+
+}
+
+.closing-text{
+
+    max-width:430px;
+
+    line-height:2;
+
+    font-size:18px;
+
+    color:#5f5555;
+
+    margin:auto;
+
+}
+
+.closing-name{
+
+    margin-top:55px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:38px;
+
+    font-weight:500;
+
+    color:#8A0D17;
+
+}
+
+.closing-date{
+
+    margin-top:12px;
+
+    letter-spacing:4px;
+
+    font-size:15px;
+
+    color:#8B7A7E;
+
+}
+
+.closing-crafted{
+
+    margin-top:70px;
+
+    font-size:15px;
+
+    color:#8B7A7E;
+
+    line-height:1.8;
+
+}
+
+.closing-crafted span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:30px;
+
+    color:#8A0D17;
+
+}
+
 
 /* ===========================
    AYAT AR-RUM
