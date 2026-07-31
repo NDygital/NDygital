@@ -683,10 +683,15 @@ body{
 
 .crafted-heart{
     display:inline;
-    color:#ffffff;
-    font-size:13px;
+    
+    color:#9C6F78;
+
+    font-size:12px;
+
     margin-left:4px;
+    
     text-shadow:0 0 2px rgba(0,0,0,.18);
+    
 }
 
 .crafted-brand{
