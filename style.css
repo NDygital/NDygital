@@ -566,6 +566,20 @@ body{
     color:#9C6F78;
 }
 
+/* LOVE PUTIH */
+
+.closing-crafted .love{
+
+    color:#fff;
+
+    font-size:15px;
+
+    display:inline;
+
+    margin:0 3px;
+
+}
+
 .countdown-divider{
 
     display:flex;
