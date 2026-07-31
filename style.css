@@ -407,7 +407,7 @@ body{
 
     font-family:"Cinzel", serif;
 
-    font-size:26px;
+    font-size:24px;
 
     font-weight:600;
 
@@ -549,7 +549,7 @@ body{
 
 .countdown-divider span{
 
-    width:80px;
+    width:120px;
 
     height:1px;
 
@@ -1256,6 +1256,22 @@ body{
         width:90%;
         margin:50px auto 0;
         font-size:18px;
+    }
+
+}
+
+@media (min-width:768px){
+
+    #countdown .judul-section{
+        font-size:40px;
+    }
+
+    .time-number{
+        font-size:82px;
+    }
+
+    .countdown-text{
+        font-size:22px;
     }
 
 }
