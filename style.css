@@ -703,6 +703,25 @@ body{
     color:#8A0D17;
 }
 
+.closing-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin:45px 0 35px;
+}
+
+.closing-divider span{
+    width:100px;
+    height:1px;
+    background:#d8c4c7;
+}
+
+.closing-divider .ornament{
+    font-size:22px;
+    color:#9C6F78;
+    line-height:1;
+}
 
 /* ===========================
    AYAT AR-RUM
