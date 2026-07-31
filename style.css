@@ -675,29 +675,27 @@ body{
 }
 
 .closing-crafted{
-
     margin-top:70px;
-
     font-size:15px;
-
     color:#8B7A7E;
-
     line-height:1.8;
-
 }
 
-.closing-crafted span{
+.crafted-heart{
+    display:inline;
+    color:#ffffff;
+    font-size:13px;
+    margin-left:4px;
+    text-shadow:0 0 2px rgba(0,0,0,.18);
+}
 
+.crafted-brand{
     display:block;
-
     margin-top:8px;
-
     font-family:"Cormorant Garamond", serif;
-
     font-size:30px;
-
-    color:#8A0D17;
-
+    letter-spacing:6px;
+    color:#9C6F78;
 }
 
 
