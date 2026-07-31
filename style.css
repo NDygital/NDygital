@@ -531,6 +531,41 @@ body{
 
 }
 
+.divider-icon{
+    font-size:26px;
+    color:#A67C84;
+    margin:0 18px;
+    line-height:1;
+    
+    }
+
+.thank-title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:20px;
+    letter-spacing:5px;
+    color:#9C6F78;
+    text-align:center;
+    margin-top:55px;
+    margin-bottom:28px;
+}
+
+.crafted{
+    text-align:center;
+    font-style:italic;
+    font-size:17px;
+    color:#6D5A5A;
+    margin-top:35px;
+}
+
+.crafted span{
+    display:block;
+    margin-top:8px;
+    font-style:normal;
+    letter-spacing:8px;
+    font-size:18px;
+    color:#9C6F78;
+}
+
 .countdown-divider{
 
     display:flex;
@@ -545,31 +580,16 @@ body{
 }
 
 .countdown-divider span{
-
-    width:120px;
-
+    width:80px;
     height:1px;
-
-    background:#D9C7CC;
-
+    background:#D8C7C7;
 }
 
-.heart{
-
-    color:#EADCDD;
-
-    font-size:18px;
-
-    line-height:1;
-
+.divider-icon{
+    font-size:26px;
+    color:#A67C84;
     margin:0 18px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
+    line-height:1;
 }
 
 #closing p{
