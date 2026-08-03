@@ -1328,3 +1328,225 @@ body{
     }
 
 }
+
+/* ==========================================
+   RSVP
+========================================== */
+
+#rsvp{
+
+    padding:110px 24px;
+
+    text-align:center;
+
+}
+
+.rsvp-title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:36px;
+    
+    letter-spacing:3px;
+
+    font-weight:500;
+
+    color:#8A0D17;
+
+    margin-bottom:28px;
+
+}
+
+.rsvp-text{
+
+    max-width:420px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#5f5555;
+
+}
+
+.rsvp-form{
+
+    margin-top:45px;
+
+}
+
+.rsvp-form input{
+
+    width:100%;
+
+    max-width:420px;
+
+    height:56px;
+
+    border:1px solid #e6d9d8;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    padding:0 22px;
+
+    font-size:16px;
+
+    font-family:"Poppins",sans-serif;
+
+    color:#5f5555;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.rsvp-form input::placeholder{
+
+    color:#b6a5a5;
+
+}
+
+.rsvp-form input:focus{
+
+    border-color:#9C6F78;
+
+}
+
+.attendance-group{
+
+    margin-top:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    align-items:flex-start;
+
+    width:100%;
+
+    max-width:420px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.attendance-option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:16px;
+
+    color:#6f5c5f;
+
+    font-family:"Poppins",sans-serif;
+
+    cursor:pointer;
+
+}
+
+.attendance-option input{
+
+    accent-color:#9C6F78;
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.message-group{
+
+    margin-top:26px;
+
+}
+
+.message-group textarea{
+
+    width:100%;
+
+    max-width:420px;
+
+    min-height:140px;
+
+    padding:18px;
+
+    border:1px solid #e5d9d7;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:15px;
+
+    color:#6f5c5f;
+
+    resize:none;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+    transition:.3s;
+
+}
+
+.message-group textarea:focus{
+
+    border-color:#9C6F78;
+
+}
+
+.rsvp-button{
+
+    margin-top:32px;
+
+}
+
+.rsvp-button button{
+
+    width:220px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#8A0D17;
+
+    color:#ffffff;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:20px;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.rsvp-button button:hover{
+
+    background:#731019;
+
+    transform:translateY(-2px);
+
+}
