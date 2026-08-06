@@ -44,7 +44,7 @@ sendButton.addEventListener("click", async function () {
     } catch (error) {
 
         console.error(error);
-        alert("Gagal mengirim RSVP.");
+        alert(error.message);
 
     }
 
