@@ -162,89 +162,292 @@ body{
     display:inline-block;
 }
 
-#rsvp{
-    min-height:100vh;
-    background:#F8EDEC;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:60px 25px;
-}
 
-#rsvp input,
-#rsvp select,
-#rsvp textarea{
-    width:100%;
-    max-width:350px;
-    margin:10px 0;
-    padding:15px;
-    border-radius:12px;
-    border:1px solid #ddd;
-    font-size:16px;
-}
-
-#rsvp textarea{
-    height:120px;
-    resize:none;
-}
-
-.btn-kirim{
-    position:static;
-    transform:none;
-    margin-top:20px;
-    background:#8A0D17;
-    color:white;
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-}
+/* ==========================================
+   RSVP - KOTAK AESTHETIC
+========================================== */
 
 #rsvp{
     min-height:100vh;
     background:#F8EDEC;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
     text-align:center;
-    padding:60px 25px;
+    padding:80px 20px;
+    box-sizing:border-box;
 }
 
-#rsvp input,
-#rsvp select,
-#rsvp textarea{
+/* Judul */
+
+#rsvp .rsvp-title{
+    margin:0 0 25px;
+    color:#8A0D17;
+    font-size:38px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+/* Garis + ornamen */
+
+#rsvp .section-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:28px;
+}
+
+#rsvp .section-divider span{
+    width:70px;
+    height:1px;
+    background:#C99A9A;
+}
+
+#rsvp .divider-icon{
+    color:#A8757D;
+    font-size:25px;
+}
+
+/* Teks pembuka */
+
+#rsvp .rsvp-text{
+    color:#625858;
+    font-size:18px;
+    line-height:1.8;
+    margin:0 0 45px;
+}
+
+
+/* ==========================================
+   KOTAK RSVP
+========================================== */
+
+#rsvp .rsvp-form,
+#rsvp .attendance-group,
+#rsvp .message-group,
+#rsvp .rsvp-button{
     width:100%;
-    max-width:350px;
-    padding:15px;
-    margin:10px 0;
-    border:1px solid #d8c8c8;
+    max-width:650px;
+}
+
+/* Kotak utama */
+
+#rsvp .rsvp-form{
+    background:rgba(255,255,255,.28);
+    border:1px solid #C88F8F;
+    border-radius:28px 28px 28px 28px;
+    padding:45px 45px 35px;
+    box-sizing:border-box;
+    position:relative;
+    box-shadow:0 10px 30px rgba(100,40,40,.08);
+}
+
+/* Ornamen sudut */
+
+#rsvp .rsvp-form::before{
+    content:"❦";
+    position:absolute;
+    top:10px;
+    right:18px;
+    color:#C88F8F;
+    font-size:55px;
+    opacity:.55;
+    transform:rotate(15deg);
+}
+
+#rsvp .rsvp-form::after{
+    content:"❦";
+    position:absolute;
+    bottom:5px;
+    left:15px;
+    color:#C88F8F;
+    font-size:55px;
+    opacity:.55;
+    transform:rotate(195deg);
+}
+
+
+/* ==========================================
+   LABEL / INPUT
+========================================== */
+
+#rsvp .rsvp-form input[type="text"]{
+    width:100%;
+    box-sizing:border-box;
+    padding:15px 18px;
+    margin:0;
+    border:1px solid #D8C8C8;
     border-radius:12px;
+    background:#fff;
     font-size:16px;
     outline:none;
 }
 
-#rsvp textarea{
-    height:120px;
+#rsvp .rsvp-form input[type="text"]:focus{
+    border-color:#A8757D;
+}
+
+
+/* ==========================================
+   PILIHAN KEHADIRAN
+========================================== */
+
+#rsvp .attendance-group{
+    box-sizing:border-box;
+    margin-top:28px;
+    text-align:left;
+}
+
+#rsvp .attendance-option{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    width:100%;
+    box-sizing:border-box;
+    padding:18px 20px;
+    margin:12px 0;
+    border:1px solid #E1CECE;
+    border-radius:12px;
+    background:rgba(255,255,255,.45);
+    cursor:pointer;
+    font-size:16px;
+    color:#403838;
+}
+
+/* Radio button */
+
+#rsvp .attendance-option input[type="radio"]{
+    width:20px;
+    height:20px;
+    margin:0;
+    flex:0 0 20px;
+    accent-color:#8A0D17;
+}
+
+
+/* ==========================================
+   UCAPAN
+========================================== */
+
+#rsvp .message-group{
+    box-sizing:border-box;
+    margin-top:25px;
+}
+
+#rsvp .message-group textarea{
+    width:100%;
+    height:130px;
+    box-sizing:border-box;
+    padding:16px 18px;
+    border:1px solid #D8C8C8;
+    border-radius:12px;
+    background:#fff;
+    font-family:inherit;
+    font-size:16px;
+    outline:none;
     resize:none;
 }
 
-.btn-kirim{
-    position:static;
-    transform:none;
-    margin-top:20px;
-    padding:15px 35px;
+#rsvp .message-group textarea:focus{
+    border-color:#A8757D;
+}
+
+
+/* ==========================================
+   TOMBOL KIRIM
+========================================== */
+
+#rsvp .rsvp-button{
+    box-sizing:border-box;
+    margin-top:28px;
+}
+
+#rsvp .rsvp-button button{
+    min-width:190px;
+    padding:15px 45px;
     border:none;
     border-radius:50px;
     background:#8A0D17;
     color:white;
     font-size:16px;
+    letter-spacing:1px;
     cursor:pointer;
+    transition:.3s;
 }
 
-.btn-kirim:hover{
+#rsvp .rsvp-button button:hover{
     opacity:.9;
+    transform:translateY(-2px);
+}
+
+
+/* ==========================================
+   TABLET / IPAD
+========================================== */
+
+@media (min-width:768px){
+
+    #rsvp{
+        padding:100px 30px;
+    }
+
+    #rsvp .rsvp-title{
+        font-size:34px;
+    }
+
+    #rsvp .rsvp-text{
+        font-size:17px;
+    }
+
+    #rsvp .rsvp-form{
+        max-width:620px;
+        padding:45px 45px 40px;
+    }
+
+}
+
+
+/* ==========================================
+   HP ANDROID / IPHONE
+========================================== */
+
+@media (max-width:767px){
+
+    #rsvp{
+        padding:70px 18px;
+    }
+
+    #rsvp .rsvp-title{
+        font-size:27px;
+        letter-spacing:1px;
+    }
+
+    #rsvp .rsvp-text{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:35px;
+    }
+
+    #rsvp .rsvp-form{
+        padding:32px 22px 30px;
+        border-radius:22px;
+    }
+
+    #rsvp .rsvp-form::before,
+    #rsvp .rsvp-form::after{
+        font-size:40px;
+    }
+
+    #rsvp .attendance-option{
+        padding:15px;
+        font-size:15px;
+    }
+
+    #rsvp .message-group textarea{
+        height:110px;
+    }
+
 }
 
 #gallery{
