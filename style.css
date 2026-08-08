@@ -375,8 +375,8 @@ body{
 #rsvp .judul-section{
     margin:0;
     color:#8A0D17;
-    font-size:38px;
-    letter-spacing:2px;
+    font-size:32px;
+    letter-spacing:1.5px;
     font-weight:600;
 }
 
@@ -399,17 +399,39 @@ body{
 
 /* KOTAK RSVP */
 
+#rsvp{
+    position:relative;
+    overflow:hidden;
+}
+
 #rsvp::before{
     content:"";
     position:absolute;
+
+    top:34%;
+    left:50%;
+    transform:translateX(-50%);
+
     width:500px;
     max-width:90%;
-    height:620px;
+    height:63%;
+
     border:1.5px solid #8A0D17;
     border-radius:25px;
+
     pointer-events:none;
     box-sizing:border-box;
+
+    z-index:0;
 }
+
+/* Semua isi RSVP berada di atas kotak */
+
+#rsvp > *{
+    position:relative;
+    z-index:1;
+}
+
 
 /* INPUT NAMA */
 
@@ -555,8 +577,8 @@ body{
     }
 
     #rsvp .judul-section{
-        font-size:28px;
-        letter-spacing:1.5px;
+    font-size:25px;
+    letter-spacing:1px;
     }
 
     .rsvp-decoration{
@@ -571,9 +593,10 @@ body{
     }
 
     #rsvp::before{
-        width:92%;
-        height:570px;
-        border-radius:20px;
+    width:92%;
+    top:30%;
+    height:67%;
+    border-radius:20px;
     }
 
     #rsvp #guestName,
