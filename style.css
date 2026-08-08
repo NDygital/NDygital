@@ -355,100 +355,254 @@ body{
 
 
 /* ==========================================
-   TOMBOL KIRIM
+   RSVP - KOTAK AESTHETIC
 ========================================== */
 
-#rsvp .rsvp-button{
+#rsvp{
+    min-height:100vh;
+    background:#F8EDEC;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
     box-sizing:border-box;
-    margin-top:28px;
 }
 
-#rsvp .rsvp-button button{
-    min-width:190px;
-    padding:15px 45px;
+/* JUDUL */
+
+#rsvp .judul-section{
+    margin:0;
+    color:#8A0D17;
+    font-size:38px;
+    letter-spacing:2px;
+    font-weight:600;
+}
+
+/* ORNAMEN */
+
+.rsvp-decoration{
+    margin:25px 0 35px;
+    color:#A9828A;
+    font-size:28px;
+}
+
+/* DESKRIPSI */
+
+.rsvp-text{
+    margin:0 0 40px;
+    color:#65595B;
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* KOTAK RSVP */
+
+#rsvp::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    max-width:90%;
+    height:620px;
+    border:1.5px solid #8A0D17;
+    border-radius:25px;
+    pointer-events:none;
+    box-sizing:border-box;
+}
+
+/* INPUT NAMA */
+
+#rsvp #guestName{
+    width:100%;
+    max-width:370px;
+    height:52px;
+    padding:0 18px;
+    box-sizing:border-box;
+
+    background:#fff;
+    border:1px solid #D8C8C8;
+    border-radius:10px;
+
+    font-size:16px;
+    color:#4d4445;
+    outline:none;
+
+    margin-bottom:25px;
+}
+
+#rsvp #guestName::placeholder{
+    color:#999;
+}
+
+/* KEHADIRAN */
+
+.attendance{
+    width:100%;
+    max-width:370px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    text-align:left;
+    margin-bottom:25px;
+}
+
+.attendance label{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    min-height:52px;
+    padding:0 18px;
+
+    background:#fff;
+    border:1px solid #D8C8C8;
+    border-radius:10px;
+
+    color:#4d4445;
+    font-size:16px;
+
+    cursor:pointer;
+    box-sizing:border-box;
+}
+
+/* RADIO ASLI DISEMBUNYIKAN */
+
+.attendance input[type="radio"]{
+    position:absolute;
+    opacity:0;
+}
+
+/* RADIO BULAT */
+
+.radio-custom{
+    width:20px;
+    height:20px;
+    border:2px solid #A9828A;
+    border-radius:50%;
+    box-sizing:border-box;
+    flex-shrink:0;
+}
+
+/* RADIO SAAT DIPILIH */
+
+.attendance input[type="radio"]:checked + .radio-custom{
+    border:6px solid #8A0D17;
+}
+
+/* UCAPAN */
+
+#rsvp #guestMessage{
+    width:100%;
+    max-width:370px;
+    height:120px;
+
+    padding:15px 18px;
+    box-sizing:border-box;
+
+    background:#fff;
+    border:1px solid #D8C8C8;
+    border-radius:10px;
+
+    font-family:inherit;
+    font-size:16px;
+    color:#4d4445;
+
+    resize:none;
+    outline:none;
+
+    margin-bottom:25px;
+}
+
+#rsvp #guestMessage::placeholder{
+    color:#999;
+}
+
+/* TOMBOL */
+
+#rsvp .btn-kirim{
+    width:160px;
+    height:50px;
+
     border:none;
-    border-radius:50px;
+    border-radius:30px;
+
     background:#8A0D17;
-    color:white;
+    color:#fff;
+
     font-size:16px;
     letter-spacing:1px;
+
     cursor:pointer;
-    transition:.3s;
 }
 
-#rsvp .rsvp-button button:hover{
-    opacity:.9;
-    transform:translateY(-2px);
-}
+/* EFEK KLIK */
 
-
-/* ==========================================
-   TABLET / IPAD
-========================================== */
-
-@media (min-width:768px){
-
-    #rsvp{
-        padding:100px 30px;
-    }
-
-    #rsvp .rsvp-title{
-        font-size:34px;
-    }
-
-    #rsvp .rsvp-text{
-        font-size:17px;
-    }
-
-    #rsvp .rsvp-form{
-        max-width:620px;
-        padding:45px 45px 40px;
-    }
-
+#rsvp .btn-kirim:active{
+    transform:scale(.97);
 }
 
 
 /* ==========================================
-   HP ANDROID / IPHONE
+   RESPONSIVE HP
 ========================================== */
 
-@media (max-width:767px){
+@media (max-width:600px){
 
     #rsvp{
         padding:70px 18px;
     }
 
-    #rsvp .rsvp-title{
-        font-size:27px;
-        letter-spacing:1px;
+    #rsvp .judul-section{
+        font-size:28px;
+        letter-spacing:1.5px;
     }
 
-    #rsvp .rsvp-text{
+    .rsvp-decoration{
+        margin:18px 0 25px;
+        font-size:24px;
+    }
+
+    .rsvp-text{
         font-size:15px;
-        line-height:1.7;
-        margin-bottom:35px;
+        line-height:1.8;
+        margin-bottom:30px;
     }
 
-    #rsvp .rsvp-form{
-        padding:32px 22px 30px;
-        border-radius:22px;
+    #rsvp::before{
+        width:92%;
+        height:570px;
+        border-radius:20px;
     }
 
-    #rsvp .rsvp-form::before,
-    #rsvp .rsvp-form::after{
-        font-size:40px;
+    #rsvp #guestName,
+    .attendance,
+    #rsvp #guestMessage{
+        max-width:320px;
     }
 
-    #rsvp .attendance-option{
-        padding:15px;
+    #rsvp #guestName{
+        height:48px;
+    }
+
+    .attendance label{
+        min-height:48px;
         font-size:15px;
     }
 
-    #rsvp .message-group textarea{
-        height:110px;
+    #rsvp #guestMessage{
+        height:105px;
+        font-size:15px;
     }
 
+    #rsvp .btn-kirim{
+        width:140px;
+        height:46px;
+        font-size:14px;
+    }
 }
+
 
 #gallery{
     min-height:100vh;
