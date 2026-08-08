@@ -21,7 +21,7 @@ if (sendButton) {
             document.getElementById("guestMessage").value.trim();
 
         const attendance =
-    document.getElementById("attendance");
+    document.querySelector('input[name="attendance"]:checked');
 
 
         if (guestName === "") {
@@ -32,7 +32,7 @@ if (sendButton) {
         }
 
 
-        if (attendance.value === "") {
+        if (!attendance) {
 
             alert("Silakan pilih konfirmasi kehadiran.");
 
