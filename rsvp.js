@@ -1,51 +1,85 @@
 import { db } from "./firebase.js";
 
 import {
-  collection,
-  addDoc,
-  serverTimestamp
+    collection,
+    addDoc,
+    serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+
 
 const sendButton = document.getElementById("sendRsvp");
 
-sendButton.addEventListener("click", async function () {
 
-    const guestName = document.getElementById("guestName").value.trim();
-    const guestMessage = document.getElementById("guestMessage").value.trim();
-    const attendance = document.querySelector('input[name="attendance"]:checked');
+if (sendButton) {
 
-    if (guestName === "") {
-        alert("Silakan isi nama Anda.");
-        return;
-    }
+    sendButton.addEventListener("click", async function () {
 
-    if (!attendance) {
-        alert("Silakan pilih konfirmasi kehadiran.");
-        return;
-    }
+        const guestName =
+            document.getElementById("guestName").value.trim();
 
-    try {
+        const guestMessage =
+            document.getElementById("guestMessage").value.trim();
 
-        await addDoc(collection(db, "rsvp"), {
+        const attendance =
+    document.getElementById("attendance");
 
-            nama: guestName,
-            ucapan: guestMessage,
-            kehadiran: attendance.value,
-            waktu: serverTimestamp()
 
-        });
+        if (guestName === "") {
 
-        alert("Terima kasih telah mengirim RSVP. 🤍");
+            alert("Silakan isi nama Anda.");
 
-        document.getElementById("guestName").value = "";
-        document.getElementById("guestMessage").value = "";
-        attendance.checked = false;
+            return;
+        }
 
-    } catch (error) {
 
-        console.error(error);
-        alert(error.message);
+        if (attendance.value === "") {
 
-    }
+            alert("Silakan pilih konfirmasi kehadiran.");
 
-});
+            return;
+        }
+
+
+        try {
+
+            await addDoc(
+                collection(db, "rsvp"),
+                {
+
+                    nama: guestName,
+
+                    kehadiran: attendance.value,
+
+                    ucapan: guestMessage,
+
+                    waktu: serverTimestamp()
+
+                }
+            );
+
+
+            alert(
+                "Terima kasih telah mengirim konfirmasi kehadiran. 🤍"
+            );
+
+
+            document.getElementById("guestName").value = "";
+
+            document.getElementById("guestMessage").value = "";
+
+           
+
+
+        } catch (error) {
+
+            console.error("RSVP ERROR:", error);
+
+            alert(
+                "Gagal mengirim RSVP: " + error.message
+            );
+
+        }
+
+    });
+
+}

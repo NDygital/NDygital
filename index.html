@@ -200,27 +200,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 </section>
 
+
 <section id="rsvp" data-aos="fade-up">
 
     <h2 class="judul-section">
         RSVP
     </h2>
 
-    <input type="text" placeholder="Nama">
+    <input
+        type="text"
+        id="guestName"
+        placeholder="Nama"
+    >
 
-    <select>
-        <option>Konfirmasi Kehadiran</option>
-        <option>Hadir</option>
-        <option>Tidak Hadir</option>
+    <select id="attendance">
+        <option value="">Konfirmasi Kehadiran</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
     </select>
 
-    <textarea placeholder="Tulis ucapan terbaik..."></textarea>
+    <textarea
+        id="guestMessage"
+        placeholder="Tulis ucapan terbaik..."
+    ></textarea>
 
-    <button class="btn-kirim">
+    <button
+        type="button"
+        id="sendRsvp"
+        class="btn-kirim"
+    >
         Kirim
     </button>
 
 </section>
+
 
 <section id="gallery" data-aos="zoom-in">
 
@@ -509,9 +522,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <audio id="music" loop></audio>
 
 <script src="data.js"></script>
-
 <script type="module" src="script.js"></script>
-<script type="module" src="firebase.js"></script>
 <script type="module" src="rsvp.js"></script>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
