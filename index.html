@@ -207,8 +207,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         KONFIRMASI KEHADIRAN
     </h2>
 
-    <div class="rsvp-decoration">
-        ❧
+    <!-- GARIS + ORNAMEN -->
+    <div class="rsvp-divider">
+        <span></span>
+        <b>⚜</b>
+        <span></span>
     </div>
 
     <p class="rsvp-text">
@@ -216,27 +219,74 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         berikan doa terbaik untuk kami.
     </p>
 
+    <!-- KOTAK RSVP -->
+    <div class="rsvp-card">
 
-    <!-- NAMA -->
-    <input
-        type="text"
-        id="guestName"
-        placeholder="Nama"
-    >
+        <!-- NAMA -->
+        <div class="rsvp-field">
+            <label>Nama</label>
 
-
-    <!-- KEHADIRAN -->
-    <div class="attendance">
-
-        <label>
             <input
-                type="radio"
-                name="attendance"
-                value="Hadir"
+                type="text"
+                id="guestName"
+                placeholder="Nama Anda"
             >
-            <span class="radio-custom"></span>
-            <span>Hadir</span>
-        </label>
+        </div>
+
+
+        <!-- KEHADIRAN -->
+        <div class="rsvp-field">
+            <label>Konfirmasi Kehadiran</label>
+
+            <div class="attendance">
+
+                <label class="attendance-option">
+                    <input
+                        type="radio"
+                        name="attendance"
+                        value="Hadir"
+                    >
+                    <span class="radio-custom"></span>
+                    <span>Hadir</span>
+                </label>
+
+                <label class="attendance-option">
+                    <input
+                        type="radio"
+                        name="attendance"
+                        value="Tidak Hadir"
+                    >
+                    <span class="radio-custom"></span>
+                    <span>Tidak Hadir</span>
+                </label>
+
+            </div>
+        </div>
+
+
+        <!-- UCAPAN -->
+        <div class="rsvp-field">
+            <label>Ucapan &amp; Doa</label>
+
+            <textarea
+                id="guestMessage"
+                placeholder="Tuliskan ucapan dan doa terbaik..."
+            ></textarea>
+        </div>
+
+
+        <!-- KIRIM -->
+        <button
+            type="button"
+            id="sendRsvp"
+            class="btn-kirim"
+        >
+            KIRIM
+        </button>
+
+    </div>
+
+</section>
 
 
         <label>

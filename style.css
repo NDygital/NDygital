@@ -366,232 +366,437 @@ u
     line-height:1.9;
 }
 
-/* KOTAK RSVP */
+/* ==========================================
+   RSVP
+========================================== */
 
 #rsvp{
-    position:relative;
-    overflow:hidden;
+    min-height:auto;
+    background:#F8EDEC;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    padding:70px 20px 90px;
+
+    box-sizing:border-box;
 }
 
-#rsvp::before{
-    content:"";
-    position:absolute;
 
-    top:390px;
-    left:50%;
-    transform:translateX(-50%);
+/* ==========================================
+   JUDUL
+========================================== */
 
-    width:500px;
-    max-width:90%;
-    height:670px;
+#rsvp .judul-section{
+    margin:0;
 
-    border:1.5px solid #8A0D17;
-    border-radius:25px;
+    color:#8A0D17;
 
-    pointer-events:none;
+    font-size:30px;
+    line-height:1.2;
+
+    letter-spacing:1px;
+    font-weight:600;
+}
+
+
+/* ==========================================
+   GARIS + ORNAMEN
+========================================== */
+
+.rsvp-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:18px;
+
+    margin:22px 0 22px;
+}
+
+.rsvp-divider span{
+    width:100px;
+    height:1.5px;
+
+    background:#D8B5B5;
+}
+
+.rsvp-divider b{
+    color:#B88A8F;
+
+    font-size:25px;
+    font-weight:400;
+
+    line-height:1;
+}
+
+
+/* ==========================================
+   DESKRIPSI
+========================================== */
+
+#rsvp .rsvp-text{
+    margin:0 0 38px;
+
+    color:#65595B;
+
+    font-family:inherit;
+
+    font-size:17px;
+    line-height:1.7;
+
+    text-align:center;
+}
+
+
+/* ==========================================
+   KOTAK RSVP
+========================================== */
+
+.rsvp-card{
+    position:relative;
+
+    width:100%;
+    max-width:650px;
+
+    padding:55px 45px 45px;
+
     box-sizing:border-box;
 
-    z-index:0;
+    border:1.5px solid #C88F8F;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.12);
+
+    box-shadow:
+        0 8px 25px rgba(100,40,40,.04);
 }
 
-/* Semua isi RSVP berada di atas kotak */
 
-#rsvp > *{
-    position:relative;
-    z-index:1;
+/* ==========================================
+   ORNAMEN KOTAK
+========================================== */
+
+.rsvp-card::before{
+    content:"❦";
+
+    position:absolute;
+
+    top:8px;
+    right:15px;
+
+    color:#C88F8F;
+
+    font-size:52px;
+
+    opacity:.45;
+
+    transform:rotate(15deg);
+}
+
+.rsvp-card::after{
+    content:"❦";
+
+    position:absolute;
+
+    bottom:5px;
+    left:15px;
+
+    color:#C88F8F;
+
+    font-size:52px;
+
+    opacity:.45;
+
+    transform:rotate(195deg);
 }
 
 
-/* INPUT NAMA */
+/* ==========================================
+   FIELD
+========================================== */
+
+.rsvp-field{
+    width:100%;
+
+    margin-bottom:28px;
+
+    text-align:left;
+}
+
+.rsvp-field > label{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#403838;
+
+    font-size:16px;
+    line-height:1.4;
+}
+
+
+/* ==========================================
+   INPUT NAMA
+========================================== */
 
 #rsvp #guestName{
     width:100%;
-    max-width:370px;
     height:52px;
+
     padding:0 18px;
+
     box-sizing:border-box;
 
     background:#fff;
+
     border:1px solid #D8C8C8;
-    border-radius:10px;
+
+    border-radius:12px;
+
+    font-family:inherit;
 
     font-size:16px;
-    color:#4d4445;
-    outline:none;
 
-    margin-bottom:25px;
+    color:#4d4445;
+
+    outline:none;
 }
 
 #rsvp #guestName::placeholder{
     color:#999;
 }
 
-/* KEHADIRAN */
+
+/* ==========================================
+   KEHADIRAN
+========================================== */
 
 .attendance{
     width:100%;
-    max-width:370px;
+
     display:flex;
     flex-direction:column;
-    gap:15px;
-    text-align:left;
-    margin-bottom:25px;
+
+    gap:12px;
 }
 
-.attendance label{
+.attendance-option{
     position:relative;
+
     display:flex;
     align-items:center;
-    gap:14px;
 
-    min-height:52px;
+    gap:15px;
+
+    width:100%;
+    min-height:58px;
+
     padding:0 18px;
 
-    background:#fff;
-    border:1px solid #D8C8C8;
-    border-radius:10px;
+    box-sizing:border-box;
 
-    color:#4d4445;
+    background:rgba(255,255,255,.35);
+
+    border:1px solid #E1CECE;
+
+    border-radius:12px;
+
+    color:#403838;
+
     font-size:16px;
 
     cursor:pointer;
-    box-sizing:border-box;
 }
 
-/* RADIO ASLI DISEMBUNYIKAN */
 
-.attendance input[type="radio"]{
+/* RADIO ASLI */
+
+.attendance-option input[type="radio"]{
     position:absolute;
+
     opacity:0;
 }
 
-/* RADIO BULAT */
+
+/* RADIO CUSTOM */
 
 .radio-custom{
     width:20px;
     height:20px;
+
     border:2px solid #A9828A;
+
     border-radius:50%;
+
     box-sizing:border-box;
+
     flex-shrink:0;
 }
 
-/* RADIO SAAT DIPILIH */
 
-.attendance input[type="radio"]:checked + .radio-custom{
+/* RADIO DIPILIH */
+
+.attendance-option input[type="radio"]:checked + .radio-custom{
     border:6px solid #8A0D17;
 }
 
-/* UCAPAN */
+
+/* ==========================================
+   UCAPAN
+========================================== */
 
 #rsvp #guestMessage{
     width:100%;
-    max-width:370px;
-    height:120px;
+    height:130px;
 
-    padding:15px 18px;
+    padding:16px 18px;
+
     box-sizing:border-box;
 
     background:#fff;
+
     border:1px solid #D8C8C8;
-    border-radius:10px;
+
+    border-radius:12px;
 
     font-family:inherit;
+
     font-size:16px;
+
     color:#4d4445;
 
     resize:none;
-    outline:none;
 
-    margin-bottom:25px;
+    outline:none;
 }
 
 #rsvp #guestMessage::placeholder{
     color:#999;
 }
 
-/* TOMBOL */
+
+/* ==========================================
+   TOMBOL
+========================================== */
 
 #rsvp .btn-kirim{
-    width:160px;
-    height:50px;
+    display:block;
+
+    width:75%;
+    max-width:400px;
+
+    height:52px;
+
+    margin:5px auto 0;
 
     border:none;
+
     border-radius:30px;
 
     background:#8A0D17;
+
     color:#fff;
 
+    font-family:inherit;
+
     font-size:16px;
+
     letter-spacing:1px;
 
     cursor:pointer;
 }
 
-/* EFEK KLIK */
-
 #rsvp .btn-kirim:active{
-    transform:scale(.97);
+    transform:scale(.98);
 }
 
 
 /* ==========================================
-   RESPONSIVE HP
+   RESPONSIVE HP & IPAD
 ========================================== */
 
-@media (max-width:600px){
+@media @media (max-width:1024px){
 
     #rsvp{
-        padding:70px 18px;
+        padding:55px 18px 70px;
     }
 
-    #rsvp .judul-section{
-    font-size:25px;
-    letter-spacing:1px;
+   #rsvp .judul-section{
+    font-size:26px;
+    letter-spacing:.5px;
+    line-height:1.2;
+    margin:0;
     }
 
-    .rsvp-decoration{
-        margin:18px 0 25px;
-        font-size:24px;
+    .rsvp-divider{
+        gap:12px;
+
+        margin:14px 0 18px;
     }
 
-    .rsvp-text{
+    .rsvp-divider span{
+        width:65px;
+    }
+
+    .rsvp-divider b{
+        font-size:21px;
+    }
+
+    #rsvp .rsvp-text{
+    font-size:15px;
+    line-height:1.7;
+    margin:0 0 25px;
+    }
+
+    .rsvp-card{
+        padding:40px 22px 35px;
+
+        border-radius:24px;
+    }
+
+    .rsvp-card::before,
+    .rsvp-card::after{
+        font-size:42px;
+    }
+
+    .rsvp-field{
+        margin-bottom:22px;
+    }
+
+    .rsvp-field > label{
         font-size:15px;
-        line-height:1.8;
-        margin-bottom:30px;
-    }
 
-    #rsvp::before{
-    width:92%;
-    top:330px;
-    height:600px;
-    border-radius:20px;
-    }
-
-    #rsvp #guestName,
-    .attendance,
-    #rsvp #guestMessage{
-        max-width:320px;
+        margin-bottom:8px;
     }
 
     #rsvp #guestName{
         height:48px;
+
+        font-size:15px;
     }
 
-    .attendance label{
-        min-height:48px;
+    .attendance-option{
+        min-height:50px;
+
         font-size:15px;
     }
 
     #rsvp #guestMessage{
-        height:105px;
+        height:110px;
+
         font-size:15px;
     }
 
     #rsvp .btn-kirim{
-        width:140px;
-        height:46px;
-        font-size:14px;
+        width:75%;
+        height:48px;
+
+        font-size:15px;
     }
 }
 
