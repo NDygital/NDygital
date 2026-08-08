@@ -377,13 +377,13 @@ u
     content:"";
     position:absolute;
 
-    top:420px;
+    top:390px;
     left:50%;
     transform:translateX(-50%);
 
     width:500px;
     max-width:90%;
-    height:780px;
+    height:670px;
 
     border:1.5px solid #8A0D17;
     border-radius:25px;
@@ -392,7 +392,7 @@ u
     box-sizing:border-box;
 
     z-index:0;
-} 
+}
 
 /* Semua isi RSVP berada di atas kotak */
 
@@ -563,8 +563,8 @@ u
 
     #rsvp::before{
     width:92%;
-    top:30%;
-    height:67%;
+    top:330px;
+    height:600px;
     border-radius:20px;
     }
 
