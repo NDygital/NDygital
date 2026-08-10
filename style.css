@@ -9,45 +9,90 @@ body{
     font-family:Arial, sans-serif;
 }
 
+/* ==========================================
+   COVER
+========================================== */
+
 .cover{
     position:relative;
 
     width:100%;
     min-height:100vh;
 
-    margin:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    background:#f7efee;
 
     overflow:hidden;
+}
+
+
+/* ==========================================
+   ISI COVER
+========================================== */
+
+.cover-content{
+    width:100%;
+    max-width:430px;
+
+    min-height:100vh;
 
     display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
+
+    padding-top:18vh;
+
+    text-align:center;
 }
 
-.cover-img{
-    width:100%;
-    display:block;
+
+/* ==========================================
+   JUDUL COVER
+========================================== */
+
+.cover-title{
+    color:#a30d18;
+
+    font-family:Arial, sans-serif;
+
+    font-size:32px;
+    font-weight:700;
+
+    line-height:1.35;
+
+    letter-spacing:5px;
+
+    text-align:center;
 }
 
-.kepada{
-    display:none;
-}
 
-#namaTamu{
-    display:none;
-}
+/* ==========================================
+   TOMBOL OPEN
+========================================== */
 
 #openBtn{
     position:absolute;
+
     left:50%;
-    bottom:7%;
+    bottom:9%;
+
     transform:translateX(-50%);
-    padding:14px 35px;
+
+    width:220px;
+    height:54px;
+
     border:none;
     border-radius:50px;
+
     background:#6d3945;
-    color:white;
-    font-size:16px;
+    color:#fff;
+
+    font-family:Arial, sans-serif;
+    font-size:17px;
+
     cursor:pointer;
 }
 
