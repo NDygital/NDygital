@@ -109,6 +109,28 @@ body{
     display:block;
 }
 
+/* ==========================================
+   ANIMASI PENGANTIN
+========================================== */
+
+.pengantin-cover{
+    animation: pengantinMasuk 1.4s ease-out 0.4s both;
+}
+
+@keyframes pengantinMasuk{
+
+    from{
+        opacity:0;
+        transform:translateX(-50%) translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(-50%) translateY(0);
+    }
+
+}
+
 
 /* ==========================================
    NAMA & TANGGAL
