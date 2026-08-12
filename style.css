@@ -40,7 +40,7 @@ body{
 .cover-title{
     position:absolute;
 
-    top:12%;
+    top:9%;
 
     left:50%;
     transform:translateX(-50%);
@@ -95,7 +95,7 @@ body{
 .pengantin-cover{
     position:absolute;
 
-    top:35%;
+    top:33%;
 
     left:50%;
 
