@@ -131,15 +131,66 @@ body{
 
 }
 
-
 /* ==========================================
-   NAMA & TANGGAL
+   NAMA PENGANTIN
 ========================================== */
 
 .cover-nama{
     position:absolute;
 
-    top:66%;
+    top:67%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    text-align:center;
+
+    color:#a30d18;
+
+    animation:namaMasuk 1.2s ease-out 1.9s both;
+}
+
+
+/* NAMA PENGANTIN */
+
+.cover-nama h2{
+    margin:0;
+
+    font-family:"Playfair Display", serif;
+
+    font-size:28px;
+    font-weight:700;
+
+    color:#a30d18;
+}
+
+
+/* TANGGAL */
+
+.cover-nama p{
+    margin-top:8px;
+
+    font-family:"Playfair Display", serif;
+
+    font-size:15px;
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    color:#a30d18;
+}
+
+
+/* ==========================================
+   NAMA TAMU
+========================================== */
+
+.cover-tamu{
+    position:absolute;
+
+    top:77%;
 
     left:50%;
 
@@ -150,41 +201,39 @@ body{
     text-align:center;
 
     color:#a30d18;
+
+    animation:tamuMasuk 1.2s ease-out 2.2s both;
 }
 
 
-.cover-nama h2{
+.cover-tamu .kepada{
     margin:0;
 
     font-family:"Playfair Display", serif;
 
-    font-size:24px;
-    font-weight:600;
+    font-size:14px;
 
-    line-height:1.3;
+    color:#6d3945;
 }
 
 
-.cover-nama p{
-    margin-top:4px;
+.cover-tamu #namaTamu{
+    margin-top:6px;
 
     font-family:"Playfair Display", serif;
 
-    font-size:14px;
+    font-size:20px;
+
     font-weight:600;
 
-    letter-spacing:2px;
+    color:#a30d18;
 }
 
 /* ==========================================
-   ANIMASI NAMA & TANGGAL
+   ANIMASI NAMA TAMU
 ========================================== */
 
-.cover-nama{
-    animation: namaMasuk 1.2s ease-out 0.9s both;
-}
-
-@keyframes namaMasuk{
+@keyframes tamuMasuk{
 
     from{
         opacity:0;
@@ -206,17 +255,21 @@ body{
     position:absolute;
 
     left:50%;
-    bottom:9%;
+
+    bottom:5%;
 
     transform:translateX(-50%);
 
     width:220px;
+
     height:54px;
 
     border:none;
+
     border-radius:50px;
 
     background:#6d3945;
+
     color:#fff;
 
     font-family:"Playfair Display", serif;
@@ -224,7 +277,11 @@ body{
     font-size:17px;
 
     cursor:pointer;
+
+    animation:tamuMasuk 1.2s ease-out 2.5s both;
 }
+
+
 
 .isi{
     display:none;
