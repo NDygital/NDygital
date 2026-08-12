@@ -158,9 +158,12 @@ body{
 .cover-nama h2{
     margin:0;
 
-    font-family:"Playfair Display", serif;
+    font-family:"Libre Baskerville", serif;
 
-    font-size:28px;
+    font-size:26px;
+
+    letter-spacing:0.5px;
+    
     font-weight:700;
 
     color:#a30d18;
