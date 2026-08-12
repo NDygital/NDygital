@@ -152,7 +152,6 @@ body{
     animation:namaMasuk 1.2s ease-out 1.9s both;
 }
 
-
 /* NAMA PENGANTIN */
 
 .cover-nama h2{
@@ -160,7 +159,7 @@ body{
 
     font-family:"Libre Baskerville", serif;
 
-    font-size:22px;
+    font-size:20px;
 
     letter-spacing:0.5px;
     
