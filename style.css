@@ -65,6 +65,104 @@ body{
     text-align:center;
 }
 
+/* ==========================================
+   HIASAN PITA & CINCIN
+========================================== */
+
+.cover-title::before{
+    content:"🎀";
+
+    position:absolute;
+
+    left:-25px;
+    top:-18px;
+
+    font-size:30px;
+
+    animation:
+        pitaMasuk 1s ease-out 0.5s both,
+        pitaGoyang 3s ease-in-out 1.5s infinite;
+}
+
+
+.cover-title::after{
+    content:"💍";
+
+    position:absolute;
+
+    right:-25px;
+    bottom:-18px;
+
+    font-size:28px;
+
+    animation:
+        cincinMasuk 1s ease-out 0.8s both,
+        cincinGoyang 3s ease-in-out 1.8s infinite;
+}
+
+
+/* ==========================================
+   ANIMASI PITA
+========================================== */
+
+@keyframes pitaMasuk{
+
+    from{
+        opacity:0;
+        transform:scale(0) rotate(-30deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(0deg);
+    }
+
+}
+
+
+@keyframes pitaGoyang{
+
+    0%,100%{
+        transform:rotate(0deg);
+    }
+
+    50%{
+        transform:rotate(8deg);
+    }
+
+}
+
+
+/* ==========================================
+   ANIMASI CINCIN
+========================================== */
+
+@keyframes cincinMasuk{
+
+    from{
+        opacity:0;
+        transform:scale(0) rotate(45deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(0deg);
+    }
+
+}
+
+
+@keyframes cincinGoyang{
+
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-5px) rotate(-8deg);
+    }
+
+}
 
 /* ==========================================
    ANIMASI JUDUL COVER
