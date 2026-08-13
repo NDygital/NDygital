@@ -81,7 +81,7 @@ body{
     position:absolute;
 
     top:-25px;
-    left:calc(50% - 230px);
+    left:18%;
 
     width:38px;
     height:38px;
@@ -101,7 +101,6 @@ body{
         cincinGoyang 3s ease-in-out 1.2s infinite;
 }
 
-
 /* BATU CINCIN */
 
 .cover-title::after{
@@ -110,7 +109,7 @@ body{
     position:absolute;
 
     top:-42px;
-    left:calc(50% - 218px);
+    left:calc(18% + 12px);
 
     width:14px;
     height:14px;
@@ -167,7 +166,7 @@ body{
     position:absolute;
 
     top:-25px;
-    right:calc(50% - 230px);
+    right:18%;
 
     width:34px;
     height:25px;
