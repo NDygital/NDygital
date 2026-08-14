@@ -2556,50 +2556,49 @@ u
    RESPONSIVE COVER - HP
 ========================================= */
 
-@media (max-width: 600px){
+@media (max-width:600px){
 
-    /* JUDUL */
+    /* AREA JUDUL */
     .cover-title{
-        top:13%;
-        width:90%;
+        top:12%;
+        width:100%;
     }
 
+    /* JUDUL 3 BARIS SEPERTI CANVA */
     .cover-title h1{
-        font-size:28px;
-        letter-spacing:1px;
-        line-height:1.3;
+        width:55%;
+        margin:0 auto;
+
+        font-family:'DynaPuff', sans-serif;
+
+        font-size:27px;
+        font-weight:600;
+
+        letter-spacing:2px;
+        line-height:1.25;
+
+        color:#1f1b1c;
+
+        text-align:center;
     }
 
 
-    /* CINCIN - GESER KE KIRI & KE ATAS */
+    /* CINCIN - KIRI ATAS */
     .cover-title::before{
-        top:-65px;
-        left:-5px;
-        width:38px;
-        height:38px;
+        top:-5px;
+        left:4%;
     }
 
     .cover-title::after{
-        top:-82px;
-        left:7px;
-        width:14px;
-        height:14px;
+        top:-22px;
+        left:10%;
     }
 
 
-    /* PITA - GESER KE KANAN & KE ATAS */
+    /* PITA - KANAN ATAS */
     .pita-cover{
-        top:-65px;
-        right:-5px;
+        top:-5px;
+        right:4%;
     }
 
-
-    /* UJUNG PITA */
-    .pita-cover::before{
-        top:17px;
-    }
-
-    .pita-cover::after{
-        top:17px;
-    }
 }
