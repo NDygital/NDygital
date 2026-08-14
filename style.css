@@ -2553,14 +2553,14 @@ u
 }
 
 /* =========================================
-   RESPONSIVE - HP / ANDROID
+   RESPONSIVE COVER - HP
 ========================================= */
 
-@media (max-width:600px){
+@media (max-width: 600px){
 
-    /* JUDUL COVER */
+    /* JUDUL */
     .cover-title{
-        top:12%;
+        top:13%;
         width:90%;
     }
 
@@ -2571,22 +2571,35 @@ u
     }
 
 
-    /* CINCIN - LEBIH KE SAMPING & ATAS */
+    /* CINCIN - GESER KE KIRI & KE ATAS */
     .cover-title::before{
-        top:-55px;
-        left:2%;
+        top:-65px;
+        left:-5px;
+        width:38px;
+        height:38px;
     }
 
     .cover-title::after{
-        top:-72px;
-        left:10%;
+        top:-82px;
+        left:7px;
+        width:14px;
+        height:14px;
     }
 
 
-    /* PITA - LEBIH KE SAMPING & ATAS */
+    /* PITA - GESER KE KANAN & KE ATAS */
     .pita-cover{
-        top:-55px;
-        right:2%;
+        top:-65px;
+        right:-5px;
     }
 
+
+    /* UJUNG PITA */
+    .pita-cover::before{
+        top:17px;
+    }
+
+    .pita-cover::after{
+        top:17px;
+    }
 }
