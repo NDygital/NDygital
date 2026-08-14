@@ -2605,3 +2605,16 @@ u
     }
 
 }
+
+
+/* =========================================
+   WARNA FINAL CINCIN & PITA
+========================================= */
+
+.cover-title::before,
+.cover-title::after,
+.pita-cover,
+.pita-cover::before,
+.pita-cover::after{
+    border-color:#8A0D17 !important;
+}
