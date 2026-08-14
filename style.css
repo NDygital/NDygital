@@ -73,12 +73,14 @@ body{
 
     line-height:1.3;
 
-    color:#7b3f4a;
+    color:#7b3f4a !important;
 
     text-transform:uppercase;
 }
 
-
+.cover-title h1 span{
+    display:block;
+}
 
 /* =========================================
    CINCIN - KIRI ATAS
