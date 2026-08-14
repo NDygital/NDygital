@@ -2553,52 +2553,51 @@ u
 }
 
 /* =========================================
-   RESPONSIVE COVER - HP
+   FINAL RESPONSIVE COVER HP
 ========================================= */
 
-@media (max-width:600px){
+@media screen and (max-width:600px){
 
-    /* AREA JUDUL */
-    .cover-title{
-        top:12%;
-        width:100%;
+    .cover .cover-title{
+        top:12% !important;
+        width:100% !important;
     }
 
-    /* JUDUL 3 BARIS SEPERTI CANVA */
-    .cover-title h1{
-        width:55%;
-        margin:0 auto;
+    .cover .cover-title h1{
+        width:180px !important;
+        max-width:180px !important;
 
-        font-family:'DynaPuff', sans-serif;
+        margin:0 auto !important;
 
-        font-size:27px;
-        font-weight:600;
+        font-family:'DynaPuff', sans-serif !important;
+        font-size:27px !important;
+        font-weight:600 !important;
 
-        letter-spacing:2px;
-        line-height:1.25;
+        letter-spacing:2px !important;
+        line-height:1.25 !important;
 
-        color:#1f1b1c;
+        color:#1f1b1c !important;
 
-        text-align:center;
+        text-align:center !important;
+
+        white-space:normal !important;
     }
 
-
-    /* CINCIN - KIRI ATAS */
-    .cover-title::before{
-        top:-5px;
-        left:4%;
+    /* CINCIN */
+    .cover .cover-title::before{
+        top:-5px !important;
+        left:4% !important;
     }
 
-    .cover-title::after{
-        top:-22px;
-        left:10%;
+    .cover .cover-title::after{
+        top:-22px !important;
+        left:10% !important;
     }
 
-
-    /* PITA - KANAN ATAS */
-    .pita-cover{
-        top:-5px;
-        right:4%;
+    /* PITA */
+    .cover .pita-cover{
+        top:-5px !important;
+        right:4% !important;
     }
 
 }
