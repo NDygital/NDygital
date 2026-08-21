@@ -121,7 +121,7 @@ body{
     position:absolute;
 
     top:-70px;
-    left:calc(10% + 20px);
+    left:calc(10% + 12px);
 
     width:42px;
     height:42px;
@@ -2653,14 +2653,14 @@ u
     position:absolute;
 
     top:calc(12% - 84px);
-    left:calc(10% + 53px);
+    left:calc(10% + 39px);
 
-    width:9px;
-    height:9px;
+    width:8px;
+    height:8px;
 
-    background:transparent;
+    background:#8A0D17;
 
-    border:2px solid #8A0D17;
+    border:1px solid #8A0D17;
 
     border-radius:50% !important;
 
@@ -2669,6 +2669,4 @@ u
     box-sizing:border-box;
 
     z-index:10;
-    
 }
-
