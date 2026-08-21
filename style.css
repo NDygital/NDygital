@@ -121,7 +121,7 @@ body{
     position:absolute;
 
     top:-70px;
-    left:calc(10% + 12px);
+    left:calc(10% + 16px);
 
     width:42px;
     height:42px;
@@ -2592,6 +2592,7 @@ u
     .cover .cover-title::after{
         top:-22px !important;
         left:10% !important;
+        left:calc(10% + 12px) !important;
     }
 
     /* PITA */
