@@ -2600,6 +2600,26 @@ u
         right:4% !important;
     }
 
+   .ring-stone-right{
+
+        top:calc(12% - 84px) !important;
+
+        left:calc(10% + 39px) !important;
+
+        width:8px !important;
+
+        height:8px !important;
+
+        background:#8A0D17 !important;
+
+        border:1px solid #8A0D17 !important;
+
+        border-radius:50% !important;
+
+        transform:none !important;
+
+    }
+
 }
 
 
