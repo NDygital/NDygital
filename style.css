@@ -84,7 +84,7 @@ body{
 
 
 /* =========================================
-   CINCIN KIRI
+   CINCIN — KIRI POLOS + KANAN BERMUTIARA
 ========================================= */
 
 .cover-title::before{
@@ -95,8 +95,8 @@ body{
     top:-70px;
     left:10%;
 
-    width:38px;
-    height:38px;
+    width:42px;
+    height:42px;
 
     border:2px solid #8A0D17;
     border-radius:50%;
@@ -112,9 +112,8 @@ body{
         cincinGoyang 3s ease-in-out 1.2s infinite;
 }
 
-/* =========================================
-   CINCIN KANAN + BATU
-========================================= */
+
+/* CINCIN KANAN + MUTIARA */
 
 .cover-title::after{
     content:"";
@@ -124,8 +123,8 @@ body{
     top:-70px;
     left:calc(10% + 20px);
 
-    width:38px;
-    height:38px;
+    width:42px;
+    height:42px;
 
     border:2px solid #8A0D17;
     border-radius:50%;
@@ -142,9 +141,17 @@ body{
 }
 
 
+/* MUTIARA DI CINCIN KANAN */
+
+.cover-title::after{
+    box-shadow:
+        20px -7px 0 -15px #8A0D17;
+}
+
+
 /* =========================================
    ANIMASI CINCIN
-   ========================================= */
+========================================= */
 
 @keyframes cincinMasuk{
 
@@ -158,7 +165,6 @@ body{
         transform:scale(1) rotate(-20deg);
     }
 }
-
 
 @keyframes cincinGoyang{
 
