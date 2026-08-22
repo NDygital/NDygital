@@ -2676,18 +2676,18 @@ u
     top:calc(12% - 84px);
     left:calc(10% + 39px);
 
-    width:8px;
-    height:8px;
+    width:10px;
+    height:10px;
 
-    background:#8A0D17;
+    background:#f7efee;
 
-    border:1px solid #8A0D17;
+    border:2px solid #8A0D17;
 
     border-radius:50% !important;
 
-    transform:none !important;
-
     box-sizing:border-box;
+
+    transform:none !important;
 
     z-index:10;
 }
