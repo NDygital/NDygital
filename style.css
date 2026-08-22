@@ -2623,6 +2623,32 @@ u
 
 }
 
+/* =========================================
+   FIX MUTIARA CINCIN - ANDROID
+========================================= */
+
+@media (max-width:600px){
+
+    .ring-stone-right{
+        width:10px !important;
+        height:10px !important;
+
+        background:#f7efee !important;
+        border:2px solid #8A0D17 !important;
+
+        border-radius:50% !important;
+        box-sizing:border-box !important;
+
+        transform:none !important;
+
+        top:calc(12% - 84px) !important;
+        left:calc(10% + 39px) !important;
+
+        z-index:10 !important;
+    }
+
+}
+
 
 /* =========================================
    WARNA FINAL CINCIN & PITA
