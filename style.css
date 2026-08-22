@@ -2717,3 +2717,23 @@ u
 
     z-index:10;
 }
+
+/* FIX MUTIARA ANDROID */
+@media (max-width:600px){
+
+    .ring-stone{
+        width:10px !important;
+        height:10px !important;
+
+        background:transparent !important;
+
+        border:2px solid #8A0D17 !important;
+
+        border-radius:50% !important;
+
+        transform:none !important;
+
+        box-sizing:border-box !important;
+    }
+
+}
