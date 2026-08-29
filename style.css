@@ -12,7 +12,7 @@ body{
 }
 
 /* ==========================================
-   COVER
+   COVER — FINAL RESPONSIVE
 ========================================== */
 
 .cover{
@@ -21,11 +21,9 @@ body{
     width:100%;
     height:100vh;
     height:100svh;
-    min-height:600px;
+    height:100dvh;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    min-height:600px;
 
     background:#f7efee;
 
@@ -35,41 +33,38 @@ body{
 }
 
 
-/* =========================================
-   JUDUL COVER
-   ========================================= */
+/* ==========================================
+   JUDUL
+========================================== */
 
 .cover-title{
     position:absolute;
 
-    top:12%;
+    top:clamp(75px, 10vh, 150px);
 
     left:50%;
 
-    transform:translateX(-50%);
-
     width:90%;
+
+    transform:translateX(-50%);
 
     text-align:center;
 
     z-index:5;
+
+    animation:judulMasuk 1.2s ease-out both;
 }
-
-
-/* =========================================
-   JUDUL COVER - WE ARE GETTING MARRIED
-   ========================================= */
 
 .cover-title h1{
     margin:0;
 
     font-family:'DynaPuff', sans-serif;
 
-    font-size:30px;
+    font-size:clamp(27px, 3.5vw, 34px);
 
-    font-weight:400;
+    font-weight:500;
 
-    letter-spacing:1px;
+    letter-spacing:2px;
 
     line-height:1.3;
 
@@ -83,214 +78,119 @@ body{
 }
 
 
-/* =========================================
-   CINCIN — KIRI POLOS + KANAN BERMUTIARA
-========================================= */
+/* ==========================================
+   CINCIN
+========================================== */
 
-.cover-title::before{
-    content:"";
-
-    position:absolute;
-
-    top:-70px;
-    left:10%;
-
-    width:42px;
-    height:42px;
-
-    border:2px solid #8A0D17;
-    border-radius:50%;
-
-    background:transparent;
-
-    transform:rotate(-18deg);
-
-    opacity:0;
-
-    animation:
-        cincinMasuk 0.8s ease-out 0.3s forwards,
-        cincinGoyang 3s ease-in-out 1.2s infinite;
-}
-
-
-/* CINCIN KANAN + MUTIARA */
-
+.cover-title::before,
 .cover-title::after{
     content:"";
 
     position:absolute;
 
-    top:-70px;
-    left:calc(10% + 16px);
-
     width:42px;
     height:42px;
 
     border:2px solid #8A0D17;
+
     border-radius:50%;
 
     background:transparent;
 
-    transform:rotate(18deg);
-
     opacity:0;
+}
+
+.cover-title::before{
+    top:-65px;
+    left:8%;
 
     animation:
-        cincinMasuk 0.8s ease-out 0.3s forwards,
+        cincinMasukKiri 0.8s ease-out 0.3s forwards,
         cincinGoyang 3s ease-in-out 1.2s infinite;
 }
 
+.cover-title::after{
+    top:-55px;
+    left:calc(8% + 20px);
 
-/* =========================================
-   ANIMASI CINCIN
-========================================= */
-
-@keyframes cincinMasuk{
-
-    from{
-        opacity:0;
-        transform:scale(0) rotate(-30deg);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1) rotate(-20deg);
-    }
-}
-
-@keyframes cincinGoyang{
-
-    0%,100%{
-        margin-top:0;
-    }
-
-    50%{
-        margin-top:-4px;
-    }
+    animation:
+        cincinMasukKanan 0.8s ease-out 0.4s forwards,
+        cincinGoyang 3s ease-in-out 1.3s infinite;
 }
 
 
-/* =========================================
-   PITA
-========================================= */
+/* BATU CINCIN */
 
-.pita-cover{
+.ring-details{
     position:absolute;
 
-    top:100px;
+    inset:0;
 
-    right:12%;
-    
-    width:58px;
-    height:50px;
-    
-    fill:none;
-    stroke:#8A0D17;
-    stroke-width:2.2;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    
-    z-index:5;
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:6;
 }
 
-/* SIMPUL PITA */
-
-.pita-cover::before{
-    content:"";
-
+.ring-stone-right{
     position:absolute;
 
-    left:50%;
-    top:2px;
+    top:calc(clamp(75px, 10vh, 150px) - 60px);
 
-    width:13px;
-    height:13px;
+    left:calc(9% + 48px);
+
+    width:9px;
+    height:9px;
+
+    background:#f7efee;
 
     border:2px solid #8A0D17;
 
     border-radius:50%;
 
-    transform:translateX(-50%);
+    opacity:0;
 
-    background:transparent;
-}
-
-
-/* SAYAP + UJUNG PITA */
-
-.pita-cover::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:0;
-
-    width:38px;
-    height:22px;
-
-    border-left:2px solid #8A0D17;
-    border-right:2px solid #8A0D17;
-
-    border-radius:50%;
-
-    background:transparent;
-
-    transform:rotate(90deg);
-}
-
-
-/* =========================================
-   ANIMASI PITA
-   ========================================= */
-
-@keyframes pitaMasuk{
-
-    from{
-        opacity:0;
-        transform:scale(0) rotate(25deg);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1) rotate(15deg);
-    }
-}
-
-
-@keyframes pitaGoyang{
-
-    0%,100%{
-        margin-top:0;
-    }
-
-    50%{
-        margin-top:-4px;
-    }
+    animation:
+        batuMasuk 0.6s ease-out 0.8s forwards,
+        cincinGoyang 3s ease-in-out 1.5s infinite;
 }
 
 
 /* ==========================================
-   ANIMASI JUDUL COVER
+   PITA
 ========================================== */
 
-.cover-title{
-    animation: judulMasuk 1.5s ease-out both;
+.pita-cover{
+    position:absolute;
+
+    top:clamp(70px, 9vh, 130px);
+
+    right:clamp(25px, 9vw, 80px);
+
+    width:58px;
+    height:50px;
+
+    fill:none;
+
+    stroke:#8A0D17;
+
+    stroke-width:2.2;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    z-index:5;
+
+    opacity:0;
+
+    animation:
+        pitaMasuk 0.8s ease-out 0.5s forwards,
+        pitaGoyang 3s ease-in-out 1.5s infinite;
 }
 
-@keyframes judulMasuk{
-
-    from{
-        opacity:0;
-        transform:translateX(-50%) translateY(-25px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(-50%) translateY(0);
-    }
-
-}
 
 /* ==========================================
    PENGANTIN
@@ -303,37 +203,21 @@ body{
 
     left:50%;
 
-    transform:translateX(-50%);
+    width:clamp(210px, 26vw, 290px);
 
-    width:260px;
     max-width:65vw;
 
     height:auto;
 
+    transform:translateX(-50%);
+
     display:block;
+
+    z-index:3;
+
+    animation:pengantinMasuk 1.3s ease-out 0.5s both;
 }
 
-/* ==========================================
-   ANIMASI PENGANTIN
-========================================== */
-
-.pengantin-cover{
-    animation: pengantinMasuk 1.4s ease-out 0.4s both;
-}
-
-@keyframes pengantinMasuk{
-
-    from{
-        opacity:0;
-        transform:translateX(-50%) translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(-50%) translateY(0);
-    }
-
-}
 
 /* ==========================================
    NAMA PENGANTIN
@@ -342,46 +226,44 @@ body{
 .cover-nama{
     position:absolute;
 
-    top:60%;
-    
+    top:61%;
+
     left:50%;
 
-    transform:translateX(-50%);
-
     width:90%;
+
+    transform:translateX(-50%);
 
     text-align:center;
 
     color:#a30d18;
 
-    animation:namaMasuk 1.2s ease-out 1.9s both;
-}
+    z-index:4;
 
-/* NAMA PENGANTIN */
+    animation:namaMasuk 1s ease-out 1.4s both;
+}
 
 .cover-nama h2{
     margin:0;
 
     font-family:"Libre Baskerville", serif;
 
-    font-size:20px;
+    font-size:clamp(19px, 2.5vw, 24px);
 
-    letter-spacing:0.5px;
-    
     font-weight:700;
+
+    letter-spacing:.5px;
 
     color:#a30d18;
 }
-
-
-/* TANGGAL */
 
 .cover-nama p{
     margin-top:8px;
 
     font-family:"Playfair Display", serif;
 
-    font-size:15px;
+    font-size:clamp(13px, 1.8vw, 16px);
+
     font-weight:600;
 
     letter-spacing:3px;
@@ -391,71 +273,54 @@ body{
 
 
 /* ==========================================
-   NAMA TAMU
+   TAMU
 ========================================== */
 
 .cover-tamu{
     position:absolute;
 
-    top:70%;
+    top:72%;
 
     left:50%;
 
-    transform:translateX(-50%);
-
     width:90%;
+
+    transform:translateX(-50%);
 
     text-align:center;
 
     color:#a30d18;
 
-    animation:tamuMasuk 1.2s ease-out 2.2s both;
-}
+    z-index:4;
 
+    animation:tamuMasuk 1s ease-out 1.7s both;
+}
 
 .cover-tamu .kepada{
     margin:0;
 
     font-family:"Playfair Display", serif;
 
-    font-size:14px;
+    font-size:clamp(13px, 1.7vw, 15px);
 
     color:#6d3945;
 }
 
-
 .cover-tamu #namaTamu{
-    margin-top:6px;
+    margin-top:7px;
 
     font-family:"Playfair Display", serif;
 
-    font-size:20px;
+    font-size:clamp(19px, 2.5vw, 23px);
 
     font-weight:600;
 
     color:#a30d18;
 }
 
-/* ==========================================
-   ANIMASI NAMA TAMU
-========================================== */
-
-@keyframes tamuMasuk{
-
-    from{
-        opacity:0;
-        transform:translateX(-50%) translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(-50%) translateY(0);
-    }
-
-}
 
 /* ==========================================
-   TOMBOL OPEN
+   TOMBOL
 ========================================== */
 
 #openBtn{
@@ -463,11 +328,11 @@ body{
 
     left:50%;
 
-    bottom:11%;
+    bottom:clamp(50px, 10vh, 110px);
 
     transform:translateX(-50%);
 
-    width:220px;
+    width:clamp(220px, 35vw, 280px);
 
     height:54px;
 
@@ -485,9 +350,243 @@ body{
 
     cursor:pointer;
 
-    animation:tamuMasuk 1.2s ease-out 2.5s both;
+    z-index:10;
+
+    animation:buttonMasuk 1s ease-out 2s both;
 }
 
+
+/* ==========================================
+   ANIMASI
+========================================== */
+
+@keyframes judulMasuk{
+    from{
+        opacity:0;
+        transform:translateX(-50%) translateY(-25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(-50%) translateY(0);
+    }
+}
+
+
+@keyframes cincinMasukKiri{
+    from{
+        opacity:0;
+        transform:scale(0) rotate(-30deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(-18deg);
+    }
+}
+
+
+@keyframes cincinMasukKanan{
+    from{
+        opacity:0;
+        transform:scale(0) rotate(30deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(18deg);
+    }
+}
+
+
+@keyframes batuMasuk{
+    from{
+        opacity:0;
+        transform:scale(0);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+@keyframes cincinGoyang{
+    0%,100%{
+        margin-top:0;
+    }
+
+    50%{
+        margin-top:-4px;
+    }
+}
+
+
+@keyframes pitaMasuk{
+    from{
+        opacity:0;
+        transform:scale(0) rotate(25deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(15deg);
+    }
+}
+
+
+@keyframes pitaGoyang{
+    0%,100%{
+        margin-top:0;
+    }
+
+    50%{
+        margin-top:-4px;
+    }
+}
+
+
+@keyframes pengantinMasuk{
+    from{
+        opacity:0;
+        transform:translateX(-50%) translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(-50%) translateY(0);
+    }
+}
+
+
+@keyframes namaMasuk{
+    from{
+        opacity:0;
+        transform:translateX(-50%) translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(-50%) translateY(0);
+    }
+}
+
+
+@keyframes tamuMasuk{
+    from{
+        opacity:0;
+        transform:translateX(-50%) translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(-50%) translateY(0);
+    }
+}
+
+
+@keyframes buttonMasuk{
+    from{
+        opacity:0;
+        transform:translateX(-50%) translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(-50%) translateY(0);
+    }
+}
+
+
+/* ==========================================
+   KHUSUS HP
+========================================== */
+
+@media (max-width:600px){
+
+    .cover{
+        min-height:600px;
+    }
+
+    .cover-title{
+        top:9%;
+    }
+
+    .cover-title h1{
+        font-size:27px;
+        font-weight:500;
+    }
+
+    .cover-title::before{
+        top:-58px;
+        left:6%;
+    }
+
+    .cover-title::after{
+        top:-48px;
+        left:calc(6% + 20px);
+    }
+
+    .ring-stone-right{
+        top:calc(9% - 53px);
+        left:calc(7% + 47px);
+    }
+
+    .pita-cover{
+        top:7%;
+        right:6%;
+        width:50px;
+    }
+
+    .pengantin-cover{
+        top:28%;
+        width:240px;
+        max-width:70vw;
+    }
+
+    .cover-nama{
+        top:60%;
+    }
+
+    .cover-tamu{
+        top:71%;
+    }
+
+    #openBtn{
+        bottom:8%;
+        width:220px;
+    }
+}
+
+
+/* ==========================================
+   HP KECIL / PENDEK
+========================================== */
+
+@media (max-height:700px) and (max-width:600px){
+
+    .cover-title{
+        top:7%;
+    }
+
+    .pengantin-cover{
+        top:27%;
+        width:210px;
+    }
+
+    .cover-nama{
+        top:58%;
+    }
+
+    .cover-tamu{
+        top:68%;
+    }
+
+    #openBtn{
+        bottom:6%;
+    }
+}
 
 
 .isi{
@@ -2552,157 +2651,3 @@ u
 
 }
 
-/* =========================================
-   FINAL RESPONSIVE COVER HP
-========================================= */
-
-@media screen and (max-width:600px){
-
-    .cover .cover-title{
-        top:12% !important;
-        width:100% !important;
-    }
-
-    .cover .cover-title h1{
-        width:180px !important;
-        max-width:180px !important;
-
-        margin:0 auto !important;
-
-        font-family:'DynaPuff', sans-serif !important;
-        font-size:27px !important;
-        font-weight:600 !important;
-
-        letter-spacing:2px !important;
-        line-height:1.25 !important;
-
-        color:#1f1b1c !important;
-
-        text-align:center !important;
-
-        white-space:normal !important;
-    }
-
-    /* CINCIN */
-    .cover .cover-title::before{
-        top:-5px !important;
-        left:4% !important;
-    }
-
-    .cover .cover-title::after{
-        top:-22px !important;
-        left:10% !important;
-        left:calc(10% + 12px) !important;
-    }
-
-    /* PITA */
-    .cover .pita-cover{
-        top:-5px !important;
-        right:4% !important;
-    }
-
-   .ring-stone-right{
-
-        top:calc(12% - 84px) !important;
-
-        left:calc(10% + 39px) !important;
-
-        width:8px !important;
-
-        height:8px !important;
-
-        background:#8A0D17 !important;
-
-        border:1px solid #8A0D17 !important;
-
-        border-radius:50% !important;
-
-        transform:none !important;
-
-    }
-
-}
-
-
-
-/* =========================================
-   WARNA FINAL CINCIN & PITA
-========================================= */
-
-.cover-title::before,
-.cover-title::after,
-.pita-cover,
-.pita-cover::before,
-.pita-cover::after{
-    border-color:#8A0D17 !important;
-}
-
-/* =========================================
-   DETAIL BATU CINCIN
-========================================= */
-
-.ring-details{
-    position:absolute;
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    pointer-events:none;
-
-    z-index:6;
-}
-
-.ring-stone{
-    position:absolute;
-
-    width:9px;
-    height:9px;
-
-    border:2px solid #8A0D17;
-
-    background:transparent;
-
-    transform:rotate(45deg);
-}
-
-/* =========================================
-   MUTIARA CINCIN KANAN
-========================================= */
-
-.ring-stone-right{
-    position:absolute;
-
-    top:calc(12% - 84px);
-    left:calc(10% + 39px);
-
-    width:10px;
-    height:10px;
-
-    background:#f7efee;
-
-    border:2px solid #8A0D17;
-
-    border-radius:50% !important;
-
-    box-sizing:border-box;
-
-    transform:none !important;
-
-    z-index:10;
-}
-
-
-/* =========================================
-   POSISI MUTIARA ANDROID
-========================================= */
-
-@media (max-width:600px){
-
-    .ring-stone-right{
-        top:calc(12% - 14px) !important;
-        left:calc(10% + 54px) !important;
-    }
-
-}
