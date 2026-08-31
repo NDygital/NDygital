@@ -2651,3 +2651,153 @@ u
 
 }
 
+
+/* ==========================================
+   PENYESUAIAN POSISI COVER FINAL
+========================================== */
+
+/* iPad / layar besar */
+@media (min-width:601px){
+
+    .cover-title{
+        top:10%;
+    }
+
+    .pengantin-cover{
+        top:28%;
+    }
+
+    .cover-nama{
+        top:58%;
+    }
+
+    .cover-tamu{
+        top:68%;
+    }
+
+    #openBtn{
+        bottom:9%;
+    }
+}
+
+
+/* ==========================================
+   ANDROID / HP LANDSCAPE
+========================================== */
+
+@media (max-height:600px) and (orientation:landscape){
+
+    .cover{
+        min-height:100svh;
+    }
+
+    .cover-title{
+        top:6%;
+    }
+
+    .cover-title h1{
+        font-size:24px;
+        line-height:1.15;
+    }
+
+    .pengantin-cover{
+        top:23%;
+        width:190px;
+    }
+
+    .cover-nama{
+        top:50%;
+    }
+
+    .cover-tamu{
+        top:66%;
+    }
+
+    #openBtn{
+        bottom:5%;
+        height:48px;
+    }
+
+    .pita-cover{
+        top:6%;
+    }
+}
+
+
+/* ==========================================
+   IPAD LANDSCAPE
+========================================== */
+
+@media (min-width:768px) and (orientation:landscape){
+
+    .cover{
+        min-height:100svh;
+    }
+
+    .cover-title{
+        top:8%;
+    }
+
+    .pengantin-cover{
+        top:26%;
+    }
+
+    .cover-nama{
+        top:56%;
+    }
+
+    .cover-tamu{
+        top:67%;
+    }
+
+    #openBtn{
+        bottom:7%;
+    }
+}
+
+
+/* ==========================================
+   FINAL POSITION ADJUSTMENT
+========================================== */
+
+/* iPad */
+@media (min-width:601px) and (max-width:1024px){
+
+    .pengantin-cover{
+        top:27%;
+    }
+
+    .cover-nama{
+        top:55%;
+    }
+
+    .cover-tamu{
+        top:65%;
+    }
+
+    #openBtn{
+        bottom:7%;
+    }
+}
+
+
+/* Android / HP */
+@media (max-width:600px){
+
+    .pengantin-cover{
+        top:27%;
+        width:220px;
+    }
+
+    .cover-nama{
+        top:58%;
+    }
+
+    .cover-tamu{
+        top:68%;
+    }
+
+    #openBtn{
+        bottom:7%;
+    }
+}
