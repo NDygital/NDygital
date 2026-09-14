@@ -78,83 +78,128 @@ body{
 }
 
 
-/* ==========================================
-   CINCIN
-========================================== */
+/* =========================================
+   CINCIN TUNGGAL + BERLIAN BLING
+   POSISI DI SAMPING JUDUL
+========================================= */
 
-.cover-title::before,
-.cover-title::after{
+.cover-title::before{
     content:"";
 
     position:absolute;
 
-    width:42px;
-    height:42px;
+    width:46px;
+    height:46px;
 
     border:2px solid #8A0D17;
-
     border-radius:50%;
 
     background:transparent;
 
-    opacity:0;
-}
-
-.cover-title::before{
-    top:-65px;
-    left:8%;
-
-    animation:
-        cincinMasukKiri 0.8s ease-out 0.3s forwards,
-        cincinGoyang 3s ease-in-out 1.2s infinite;
-}
-
-.cover-title::after{
-    top:-55px;
-    left:calc(8% + 20px);
-
-    animation:
-        cincinMasukKanan 0.8s ease-out 0.4s forwards,
-        cincinGoyang 3s ease-in-out 1.3s infinite;
-}
-
-
-/* BATU CINCIN */
-
-.ring-details{
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    pointer-events:none;
+    /* posisi cincin di kiri tulisan */
+    left:calc(50% - 145px);
+    top:48px;
 
     z-index:6;
-}
 
-.ring-stone-right{
-    position:absolute;
-
-    top:calc(clamp(75px, 10vh, 150px) - 60px);
-
-    left:calc(9% + 48px);
-
-    width:9px;
-    height:9px;
-
-    background:#f7efee;
-
-    border:2px solid #8A0D17;
-
-    border-radius:50%;
+    transform:rotate(-15deg);
 
     opacity:0;
 
     animation:
-        batuMasuk 0.6s ease-out 0.8s forwards,
-        cincinGoyang 3s ease-in-out 1.5s infinite;
+        cincinMasukBaru 1s ease-out 0.4s forwards,
+        cincinBling 2.5s ease-in-out 1.5s infinite;
+}
+
+
+/* =========================================
+   BERLIAN DI ATAS CINCIN
+========================================= */
+
+.cover-title::after{
+    content:"✦";
+
+    position:absolute;
+
+    left:calc(50% - 126px);
+    top:35px;
+
+    color:#8A0D17;
+
+    font-size:18px;
+
+    line-height:1;
+
+    z-index:7;
+
+    opacity:0;
+
+    animation:
+        berlianMasuk 1s ease-out 0.7s forwards,
+        berlianBling 1.8s ease-in-out 1.5s infinite;
+}
+
+
+/* =========================================
+   ANIMASI CINCIN
+========================================= */
+
+@keyframes cincinMasukBaru{
+
+    from{
+        opacity:0;
+        transform:scale(0) rotate(-30deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(-15deg);
+    }
+}
+
+
+@keyframes cincinBling{
+
+    0%,100%{
+        filter:drop-shadow(0 0 0 transparent);
+    }
+
+    50%{
+        filter:drop-shadow(0 0 5px rgba(138,13,23,.45));
+    }
+}
+
+
+/* =========================================
+   ANIMASI BERLIAN
+========================================= */
+
+@keyframes berlianMasuk{
+
+    from{
+        opacity:0;
+        transform:scale(0) rotate(0deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(15deg);
+    }
+}
+
+
+@keyframes berlianBling{
+
+    0%,100%{
+        opacity:.6;
+        transform:scale(.8) rotate(0deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.35) rotate(20deg);
+        filter:drop-shadow(0 0 6px rgba(138,13,23,.6));
+    }
 }
 
 
@@ -373,54 +418,6 @@ body{
 }
 
 
-@keyframes cincinMasukKiri{
-    from{
-        opacity:0;
-        transform:scale(0) rotate(-30deg);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1) rotate(-18deg);
-    }
-}
-
-
-@keyframes cincinMasukKanan{
-    from{
-        opacity:0;
-        transform:scale(0) rotate(30deg);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1) rotate(18deg);
-    }
-}
-
-
-@keyframes batuMasuk{
-    from{
-        opacity:0;
-        transform:scale(0);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
-}
-
-
-@keyframes cincinGoyang{
-    0%,100%{
-        margin-top:0;
-    }
-
-    50%{
-        margin-top:-4px;
-    }
-}
 
 
 @keyframes pitaMasuk{
@@ -526,11 +523,6 @@ body{
     .cover-title::after{
         top:-48px;
         left:calc(6% + 20px);
-    }
-
-    .ring-stone-right{
-        top:calc(9% - 53px);
-        left:calc(7% + 47px);
     }
 
     .pita-cover{
@@ -708,10 +700,6 @@ body{
     display:inline-block;
 }
 
-
-u
-    margin-bottom:28px;
-}
 
 #rsvp .section-divider span{
     width:70px;
@@ -1266,7 +1254,7 @@ u
    RESPONSIVE HP & IPAD
 ========================================== */
 
-@media @media (max-width:1024px){
+@media (max-width:1024px){
 
     #rsvp{
         padding:55px 18px 70px;
