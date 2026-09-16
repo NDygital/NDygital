@@ -203,37 +203,43 @@ body{
 }
 
 
-/* ==========================================
-   PITA
-========================================== */
+/* =========================================
+   PITA DI SAMPING KANAN JUDUL
+========================================= */
 
 .pita-cover{
     position:absolute;
 
-    top:clamp(70px, 9vh, 130px);
+    /* mengikuti posisi judul */
+    top:calc(clamp(75px,10vh,150px) + 45px);
 
-    right:clamp(25px, 9vw, 80px);
+    /* sebelah kanan judul */
+    left:calc(50% + 105px);
 
-    width:58px;
-    height:50px;
+    width:52px;
+    height:46px;
+
+    z-index:6;
 
     fill:none;
-
     stroke:#8A0D17;
-
-    stroke-width:2.2;
-
-    stroke-linecap:round;
-
-    stroke-linejoin:round;
-
-    z-index:5;
+    stroke-width:1.5;
 
     opacity:0;
 
-    animation:
-        pitaMasuk 0.8s ease-out 0.5s forwards,
-        pitaGoyang 3s ease-in-out 1.5s infinite;
+    animation:pitaMasuk 1s ease-out .8s forwards;
+}
+
+@keyframes pitaMasuk{
+    from{
+        opacity:0;
+        transform:translateY(-8px) scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
 }
 
 
@@ -414,21 +420,6 @@ body{
     to{
         opacity:1;
         transform:translateX(-50%) translateY(0);
-    }
-}
-
-
-
-
-@keyframes pitaMasuk{
-    from{
-        opacity:0;
-        transform:scale(0) rotate(25deg);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1) rotate(15deg);
     }
 }
 
