@@ -516,13 +516,13 @@ body{
     }
 
     .cover-title::before{
-        top:-58px;
-        left:6%;
+    top:48px;
+    left:calc(50% - 120px);
     }
 
     .cover-title::after{
-        top:-48px;
-        left:calc(6% + 20px);
+    top:35px;
+    left:calc(50% - 98px);
     }
 
     .pita-cover{
