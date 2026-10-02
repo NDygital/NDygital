@@ -210,14 +210,13 @@ body{
 .pita-cover{
     position:absolute;
 
-    top:calc(clamp(75px,10vh,150px) + 42px);
-    left:calc(50% + 105px);
+    top:calc(clamp(75px,10vh,150px) + 35px);
+    left:calc(50% + 100px);
 
-    width:52px;
+    width:90px;
     height:auto;
 
     z-index:6;
-
     object-fit:contain;
 
     opacity:0;
@@ -512,10 +511,9 @@ body{
     }
 
     .pita-cover{
-    top:calc(9% + 42px);
-    left:calc(50% + 98px);
-
-    width:48px;
+    top:calc(9% + 35px);
+    left:calc(50% + 95px);
+    width:82px;
     height:48px;
     }
 
