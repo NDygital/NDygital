@@ -214,15 +214,11 @@ body{
     left:calc(50% + 105px);
 
     width:52px;
-    height:52px;
-
-    fill:none;
-    stroke:#8A0D17;
-    stroke-width:1.4;
-    stroke-linecap:round;
-    stroke-linejoin:round;
+    height:auto;
 
     z-index:6;
+
+    object-fit:contain;
 
     opacity:0;
 
